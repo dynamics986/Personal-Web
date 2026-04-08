@@ -16,43 +16,25 @@ interface BlogPost {
   image: string;
 }
 
-const blogPosts: BlogPost[] = [
+const projects: Project[] = [
   {
     id: '1',
-    title: 'Building Scalable React Applications with TypeScript',
-    excerpt: 'Learn how to structure large-scale React applications using TypeScript to ensure type safety and better developer experience.',
-    date: 'March 15, 2025',
-    readTime: '8 min read',
-    category: 'Web Development',
-    image: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=600'
+    title: 'C programming',
+    description: 'This repository contains my exploration of C programming, organized into different branches based on complexity and purpose.',
+    image: 'https://public.ysjf.com/product/preview/cT9mqPVWS6.jpg',
+    technologies: ['C', 'Data Structures', 'Advanced Memory Management'],
+    githubUrl: 'https://github.com/dynamics986/C-Basics',
+    category: 'Logic Training'
   },
   {
     id: '2',
-    title: 'The Future of Frontend Development in 2025',
-    excerpt: 'Exploring emerging trends and technologies that will shape the future of frontend development in the coming years.',
-    date: 'February 28, 2025',
-    readTime: '6 min read',
-    category: 'Technology',
-    image: 'https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=600'
+    title: 'SSCS Optimizer',
+    description: 'A complexity-aware procedural generator built on top of Infinigen, enabling controlled generation of indoor scenes with quantifiable static complexity. ',
+    image: 'https://public.ysjf.com/product/preview/JJWze1I5l6.jpg',
+    technologies: ['Python', 'C', 'C Shell', 'Cuda', 'bpy'],
+    githubUrl: 'https://github.com/dynamics986/SSCS-Optimizer',
+    category: 'mobile computing'
   },
-  {
-    id: '3',
-    title: 'Optimizing Performance in JavaScript Applications',
-    excerpt: 'Practical techniques for improving the performance of your JavaScript applications and delivering better user experiences.',
-    date: 'January 10, 2025',
-    readTime: '10 min read',
-    category: 'Performance',
-    image: 'https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=600'
-  },
-  {
-    id: '4',
-    title: 'Building Accessible Web Applications',
-    excerpt: 'A comprehensive guide to ensuring your web applications are accessible to users with disabilities.',
-    date: 'December 5, 2024',
-    readTime: '12 min read',
-    category: 'Accessibility',
-    image: 'https://images.pexels.com/photos/7988087/pexels-photo-7988087.jpeg?auto=compress&cs=tinysrgb&w=600'
-  }
 ];
 
 const Blog: React.FC = () => {

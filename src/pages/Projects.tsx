@@ -23,18 +23,18 @@ const projects: Project[] = [
     title: 'C programming',
     description: 'This repository contains my exploration of C programming, organized into different branches based on complexity and purpose.',
     image: 'https://public.ysjf.com/product/preview/cT9mqPVWS6.jpg',
-    technologies: ['C', 'Data Structures', 'Node.js', 'Express', 'MongoDB', 'Chart.js'],
+    technologies: ['C', 'Data Structures', 'Advanced Memory Management'],
     githubUrl: 'https://github.com/dynamics986/C-Basics',
     category: 'Logic Training'
   },
   {
     id: '2',
-    title: 'Weather Application',
-    description: 'A sleek mobile weather app with location-based forecasts, hourly updates, and beautiful visualizations of weather patterns.',
+    title: 'SSCS Optimizer: Static Scene Complexity Optimization for Indoor Environments',
+    description: 'A complexity-aware procedural generator built on top of Infinigen, enabling controlled generation of indoor scenes with quantifiable static complexity. ',
     image: 'https://public.ysjf.com/product/preview/JJWze1I5l6.jpg',
-    technologies: ['React Native', 'TypeScript', 'Redux', 'Weather API'],
-    githubUrl: 'https://github.com',
-    category: 'mobile'
+    technologies: ['Python', 'C', 'C Shell', 'Cuda', 'bpy'],
+    githubUrl: 'https://github.com/dynamics986/SSCS-Optimizer',
+    category: 'mobile', 'robot'
   },
 ];
 

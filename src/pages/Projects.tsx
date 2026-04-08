@@ -21,9 +21,9 @@ const projects: Project[] = [
   {
     id: '1',
     title: 'C programming',
-    description: 'This repository contains my exploration of C programming, organized into different branches based on complexity and purpose. All code is written in C, ranging from beginner snippets to advanced low-level implementations.',
+    description: 'This repository contains my exploration of C programming, organized into different branches based on complexity and purpose.',
     image: 'https://public.ysjf.com/product/preview/cT9mqPVWS6.jpg',
-    technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'Chart.js'],
+    technologies: ['C', 'Data Structures', 'Node.js', 'Express', 'MongoDB', 'Chart.js'],
     githubUrl: 'https://github.com/dynamics986/C-Basics',
     category: 'Logic Training'
   },
@@ -31,29 +31,10 @@ const projects: Project[] = [
     id: '2',
     title: 'Weather Application',
     description: 'A sleek mobile weather app with location-based forecasts, hourly updates, and beautiful visualizations of weather patterns.',
-    image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: 'https://public.ysjf.com/product/preview/JJWze1I5l6.jpg',
     technologies: ['React Native', 'TypeScript', 'Redux', 'Weather API'],
     githubUrl: 'https://github.com',
     category: 'mobile'
-  },
-  {
-    id: '3',
-    title: 'Task Management System',
-    description: 'A collaborative task management platform with real-time updates, team assignments, and progress tracking features.',
-    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600',
-    technologies: ['Vue.js', 'Firebase', 'Tailwind CSS', 'Vite'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
-    category: 'web'
-  },
-  {
-    id: '4',
-    title: 'Machine Learning Image Classifier',
-    description: 'An image classification tool that uses machine learning to identify objects in photos with high accuracy.',
-    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600',
-    technologies: ['Python', 'TensorFlow', 'Flask', 'React'],
-    githubUrl: 'https://github.com',
-    category: 'other'
   },
 ];
 

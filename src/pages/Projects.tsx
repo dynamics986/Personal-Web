@@ -20,13 +20,12 @@ interface Project {
 const projects: Project[] = [
   {
     id: '1',
-    title: 'E-commerce Dashboard',
-    description: 'A comprehensive dashboard for e-commerce analytics with real-time data visualization, inventory management, and sales forecasting.',
-    image: 'https://images.pexels.com/photos/6956894/pexels-photo-6956894.jpeg?auto=compress&cs=tinysrgb&w=600',
+    title: 'C programming',
+    description: 'This repository contains my exploration of C programming, organized into different branches based on complexity and purpose. All code is written in C, ranging from beginner snippets to advanced low-level implementations.',
+    image: 'https://public.ysjf.com/product/preview/cT9mqPVWS6.jpg',
     technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'Chart.js'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
-    category: 'web'
+    githubUrl: 'https://github.com/dynamics986/C-Basics',
+    category: 'Logic Training'
   },
   {
     id: '2',

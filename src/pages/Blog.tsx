@@ -2,8 +2,9 @@ import React from 'react';
 import PageTitle from '../components/common/PageTitle';
 import Card from '../components/common/Card';
 import Section from '../components/common/Section';
-import { Calendar, ChevronRight, Tag, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Calendar, ChevronRight, Tag, Clock } from 'lucide-react';
+
 
 interface BlogPost {
   id: string;

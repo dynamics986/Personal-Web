@@ -64,10 +64,10 @@ const About: React.FC = () => {
               <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50 mb-4">Biography</h2>
               <div className="space-y-4 text-primary-700 dark:text-primary-300">
                 <p>
-                  Continuous learning, engineering innovation and academic connection never fail to fascinate me. I choose Mathematics and Information Engineering as my major because the useful theories and logical thinking I developed in math help me go further in engineering topics like artificial intelligence and engineering systems. With tools like probability theory and linear algebra, I self-learned various machine learning algorithms in my spare time, like K-Means algorithms, CNN and RNN.
+                  Hello! I'm FAN, Sixing, an undergraduate student majoring in Mathematics and Information Engineering. I choose my major because the useful theories and logical thinking I developed in math help me go further in engineering topics like artificial intelligence and engineering systems. With tools like probability theory and linear algebra, I self-learned various machine learning algorithms in my spare time, like K-Means algorithms, CNN and RNN. 
                 </p>
                 <p>
-                  I have been in AIoT Lab as an undergraduate student since June 2025. My passion is on spatial engineering topics such as positioning systems, network systems and control theory. I had research on robot indoor navigation and UAV control and communication. My current research is in an interdisciplinary field at the intersection of human-centered AI and robotics.
+                  Continuous learning, engineering innovation and academic connection never fail to fascinate me. I have been in AIoT Lab as an undergraduate student since June 2025. My passion is on spatial engineering topics such as positioning systems, network systems and control theory. I had research on robot indoor navigation and UAV control and communication. My current research is in an interdisciplinary field at the intersection of human-centered AI and robotics.
                 </p>
               </div>
             </Card>
@@ -84,7 +84,7 @@ const About: React.FC = () => {
                   icon={<Briefcase size={18} />}
                   title="Undergraduate Research Assistant"
                   company="AIoT Lab"
-                  period="June 2025 - Present"
+                  period="June 2025 - "
                 >
                   <ul className="list-disc list-inside space-y-1 text-primary-700 dark:text-primary-300">
                     <li>Conducting research on robot indoor navigation systems and positioning algorithms</li>
@@ -101,11 +101,15 @@ const About: React.FC = () => {
                   icon={<GraduationCap size={18} />}
                   title="B.S. in Mathematics and Information Engineering"
                   company="The Chinese University of Hong Kong"
-                  period="2022 - Present"
+                  period="Sep 2023 - Present"
                 >
                   <p className="text-primary-700 dark:text-primary-300">
-                    Studying Mathematics and Information Engineering with focus on artificial intelligence, engineering systems, and spatial engineering. Self-learning machine learning algorithms including K-Means, CNN, and RNN using probability theory and linear algebra.
-                  </p>
+                
+                  <ul className="list-disc list-inside space-y-1 text-primary-700 dark:text-primary-300">
+                    <li>Programming Language: C, Java, Python, Matlab</li>
+                    <li>Tools: VS Code, Cursor, GitHub, Blender, Linux System and Wireshark/tcpdump</li>
+                    <li>Mathematics: Calculus, Linear Algebra, Fourier Analysis, Complex Analysis, Algebraic Structures, Mathematical Analysis, Discrete Math and Probability</li>
+                  </ul>
                 </TimelineItem>
               </div>
             </motion.div>

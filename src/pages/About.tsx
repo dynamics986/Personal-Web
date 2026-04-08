@@ -111,6 +111,7 @@ const About: React.FC = () => {
                     <li>Tools: VS Code, Cursor, GitHub, Blender, Linux System and Wireshark/tcpdump</li>
                      <li>Mathematics: Calculus, Linear Algebra, Fourier Analysis, Complex Analysis, Algebraic Structures, Mathematical Analysis, Discrete Math and Probability</li>
                   </ul>
+                  </div>
                 </TimelineItem>
               </div>
             </motion.div>

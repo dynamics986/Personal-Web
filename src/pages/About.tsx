@@ -82,14 +82,15 @@ const About: React.FC = () => {
               <div className="space-y-6">
                 <TimelineItem
                   icon={<Briefcase size={18} />}
-                  title="Undergraduate Research Assistant"
+                  title="Robot Navigation, Research Assistant"
                   company="AIoT Lab"
-                  period="June 2025 - "
+                  period="Jun 2025 – Feb 2026"
                 >
                   <ul className="list-disc list-inside space-y-1 text-primary-700 dark:text-primary-300">
-                    <li>Conducting research on robot indoor navigation systems and positioning algorithms</li>
-                    <li>Working on UAV control systems and communication protocols</li>
-                    <li>Exploring interdisciplinary topics at the intersection of human-centered AI and robotics</li>
+                    <li>Formulated Static Scene Complexity Score (SSCS) to evaluate the indoor scene complexity</li>
+                    <li>Developed a SSCS optimizer for generating indoor scenes of various scene complexity</li>
+                    <li>Used interpolation sampling and Bayesian optimization to improve the efficiency of the system</li>
+                    <li>Generated 50+ distinct scenes with customized objects with the system for indoor navigation test</li>
                   </ul>
                 </TimelineItem>
               </div>

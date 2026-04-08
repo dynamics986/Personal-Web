@@ -13,8 +13,9 @@ const CV: React.FC = () => {
         subtitle="My professional experience, education, and skills"
       >
         <div className="mt-6">
-          <a 
-            href="#" 
+          <a
+            href="/CV_FAN_Sixing.pdf"
+            download="CV_FAN_Sixing.pdf"
             className="inline-flex items-center px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white rounded-md transition-colors duration-250"
           >
             <Download size={18} className="mr-2" />

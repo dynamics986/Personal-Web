@@ -29,7 +29,7 @@ const projects: Project[] = [
   },
   {
     id: '2',
-    title: 'SSCS Optimizer: Static Scene Complexity Optimization for Indoor Environments',
+    title: 'SSCS Optimizer',
     description: 'A complexity-aware procedural generator built on top of Infinigen, enabling controlled generation of indoor scenes with quantifiable static complexity. ',
     image: 'https://public.ysjf.com/product/preview/JJWze1I5l6.jpg',
     technologies: ['Python', 'C', 'C Shell', 'Cuda', 'bpy'],

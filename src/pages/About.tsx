@@ -108,7 +108,6 @@ const About: React.FC = () => {
                   <ul className="list-disc list-inside space-y-1 text-primary-700 dark:text-primary-300">
                     <li>Programming Language: C, Java, Python, Matlab</li>
                     <li>Tools: VS Code, Cursor, GitHub, Blender, Linux System and Wireshark/tcpdump</li>
-                   
                   </ul>
                 </TimelineItem>
               </div>

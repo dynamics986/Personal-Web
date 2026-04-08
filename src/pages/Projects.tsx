@@ -34,7 +34,7 @@ const projects: Project[] = [
     image: 'https://public.ysjf.com/product/preview/JJWze1I5l6.jpg',
     technologies: ['Python', 'C', 'C Shell', 'Cuda', 'bpy'],
     githubUrl: 'https://github.com/dynamics986/SSCS-Optimizer',
-    category: 'mobile', 'robot'
+    category: 'mobile computing'
   },
 ];
 

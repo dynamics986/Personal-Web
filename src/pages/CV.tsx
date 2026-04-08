@@ -33,49 +33,21 @@ const CV: React.FC = () => {
             <Card className="mb-8">
               <div className="flex items-center mb-4">
                 <Briefcase className="w-6 h-6 text-accent-500 mr-3" />
-                <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50">Professional Experience</h2>
+                <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50">Research Experience</h2>
               </div>
-              
+
               <div className="space-y-6">
-                <ExperienceItem 
-                  title="Senior Software Engineer"
-                  company="TechCorp Inc."
-                  location="San Francisco, CA"
-                  period="2022 - Present"
+                <ExperienceItem
+                  title="Undergraduate Research Assistant"
+                  company="AIoT Lab"
+                  location="Hong Kong, China"
+                  period="June 2025 - Present"
                 >
                   <ul className="list-disc list-inside space-y-2">
-                    <li>Led the development of a real-time analytics dashboard using React and WebSockets that increased client engagement by 35%</li>
-                    <li>Improved API performance by 40% through implementing Redis caching and query optimization</li>
-                    <li>Mentored junior developers and conducted technical interviews for frontend and full-stack positions</li>
-                    <li>Architected and implemented a microservices-based system using Node.js, Docker, and Kubernetes</li>
-                  </ul>
-                </ExperienceItem>
-                
-                <ExperienceItem 
-                  title="Software Engineer"
-                  company="InnovateSoft"
-                  location="San Jose, CA"
-                  period="2019 - 2022"
-                >
-                  <ul className="list-disc list-inside space-y-2">
-                    <li>Developed and maintained multiple client-facing applications using React, Redux, and TypeScript</li>
-                    <li>Implemented CI/CD pipelines with GitHub Actions that reduced deployment time by 60%</li>
-                    <li>Collaborated with design team to create responsive and accessible interfaces following WCAG guidelines</li>
-                    <li>Reduced bundle size by 30% through code splitting and lazy loading techniques</li>
-                  </ul>
-                </ExperienceItem>
-                
-                <ExperienceItem 
-                  title="Junior Developer"
-                  company="StartupX"
-                  location="Palo Alto, CA"
-                  period="2017 - 2019"
-                >
-                  <ul className="list-disc list-inside space-y-2">
-                    <li>Built frontend components using React and Redux for a SaaS product with 10,000+ users</li>
-                    <li>Created RESTful APIs using Node.js and Express with MongoDB for data persistence</li>
-                    <li>Participated in agile development processes, including daily standups and sprint planning</li>
-                    <li>Implemented automated testing using Jest and React Testing Library, achieving 80% code coverage</li>
+                    <li>Conducting research on robot indoor navigation systems and positioning algorithms</li>
+                    <li>Working on UAV control systems and communication protocols</li>
+                    <li>Exploring interdisciplinary topics at the intersection of human-centered AI and robotics</li>
+                    <li>Applying probability theory and linear algebra to solve spatial engineering problems</li>
                   </ul>
                 </ExperienceItem>
               </div>
@@ -94,24 +66,14 @@ const CV: React.FC = () => {
               </div>
               
               <div className="space-y-6">
-                <ExperienceItem 
-                  title="M.S. in Computer Science"
-                  company="Stanford University"
-                  location="Stanford, CA"
-                  period="2015 - 2017"
+                <ExperienceItem
+                  title="B.S. in Mathematics and Information Engineering"
+                  company="The Chinese University of Hong Kong"
+                  location="Hong Kong, China"
+                  period="2022 - Present"
                 >
-                  <p>Specialized in Artificial Intelligence and Machine Learning. Thesis on "Optimizing Neural Networks for Edge Computing Devices."</p>
-                  <p className="mt-2">Relevant coursework: Advanced Algorithms, Machine Learning, Computer Vision, Distributed Systems</p>
-                </ExperienceItem>
-                
-                <ExperienceItem 
-                  title="B.S. in Computer Science"
-                  company="University of California, Berkeley"
-                  location="Berkeley, CA"
-                  period="2011 - 2015"
-                >
-                  <p>Graduated with honors (GPA: 3.8/4.0). Active member of the Coding Club and AI Research Group.</p>
-                  <p className="mt-2">Relevant coursework: Data Structures, Algorithms, Database Systems, Operating Systems</p>
+                  <p>Studying Mathematics and Information Engineering with focus on artificial intelligence, engineering systems, and spatial engineering.</p>
+                  <p className="mt-2">Self-learning machine learning algorithms including K-Means, CNN, and RNN. Research interests include positioning systems, network systems, control theory, robot indoor navigation, and UAV control and communication.</p>
                 </ExperienceItem>
               </div>
             </Card>
@@ -129,24 +91,24 @@ const CV: React.FC = () => {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4">
-                <SkillCategory 
-                  title="Frontend Development"
-                  skills={['React', 'TypeScript', 'Next.js', 'Vue.js', 'HTML/CSS', 'JavaScript', 'Redux', 'Tailwind CSS']}
+                <SkillCategory
+                  title="Machine Learning"
+                  skills={['K-Means', 'CNN', 'RNN', 'Neural Networks', 'Deep Learning']}
                 />
-                
-                <SkillCategory 
-                  title="Backend Development"
-                  skills={['Node.js', 'Express', 'NestJS', 'Django', 'RESTful APIs', 'GraphQL', 'WebSockets']}
+
+                <SkillCategory
+                  title="Mathematics"
+                  skills={['Probability Theory', 'Linear Algebra', 'Statistics', 'Optimization']}
                 />
-                
-                <SkillCategory 
-                  title="Databases"
-                  skills={['MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'Firebase']}
+
+                <SkillCategory
+                  title="Engineering"
+                  skills={['Positioning Systems', 'Network Systems', 'Control Theory', 'Robotics', 'UAV Systems']}
                 />
-                
-                <SkillCategory 
-                  title="DevOps & Tools"
-                  skills={['Git', 'Docker', 'Kubernetes', 'AWS', 'CI/CD', 'Linux', 'Webpack']}
+
+                <SkillCategory
+                  title="Programming & Tools"
+                  skills={['Python', 'MATLAB', 'C++', 'Git', 'ROS']}
                 />
               </div>
             </Card>
@@ -165,23 +127,13 @@ const CV: React.FC = () => {
               
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold text-primary-800 dark:text-primary-100">AWS Certified Solutions Architect</h3>
-                  <p className="text-secondary-500">Amazon Web Services • 2023</p>
+                  <h3 className="font-semibold text-primary-800 dark:text-primary-100">Research Assistant</h3>
+                  <p className="text-secondary-500">AIoT Lab • 2025 - Present</p>
                 </div>
-                
+
                 <div>
-                  <h3 className="font-semibold text-primary-800 dark:text-primary-100">Google Cloud Professional Developer</h3>
-                  <p className="text-secondary-500">Google Cloud • 2022</p>
-                </div>
-                
-                <div>
-                  <h3 className="font-semibold text-primary-800 dark:text-primary-100">Hackathon Winner - Best Use of AI</h3>
-                  <p className="text-secondary-500">TechCrunch Disrupt • 2021</p>
-                </div>
-                
-                <div>
-                  <h3 className="font-semibold text-primary-800 dark:text-primary-100">Outstanding Contribution Award</h3>
-                  <p className="text-secondary-500">InnovateSoft • 2020</p>
+                  <h3 className="font-semibold text-primary-800 dark:text-primary-100">Academic Excellence</h3>
+                  <p className="text-secondary-500">The Chinese University of Hong Kong</p>
                 </div>
               </div>
             </Card>

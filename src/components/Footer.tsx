@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-primary-600 dark:text-primary-400 text-sm">
-            © {currentYear} Francis Fan
+            © {currentYear} FAN, Sixing
           </p>
           
           <div className="flex space-x-6 mt-4 md:mt-0">

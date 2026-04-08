@@ -103,11 +103,12 @@ const About: React.FC = () => {
                   company="The Chinese University of Hong Kong"
                   period="Sep 2023 - Present"
                 >
-                  <p className="text-primary-700 dark:text-primary-300">
+                  <div className="text-primary-700 dark:text-primary-300">
                 
                   <ul className="list-disc list-inside space-y-1 text-primary-700 dark:text-primary-300">
                     <li>Programming Language: C, Java, Python, Matlab</li>
                     <li>Tools: VS Code, Cursor, GitHub, Blender, Linux System and Wireshark/tcpdump</li>
+                     <li>Mathematics: Calculus, Linear Algebra, Fourier Analysis, Complex Analysis, Algebraic Structures, Mathematical Analysis, Discrete Math and Probability</li>
                   </ul>
                 </TimelineItem>
               </div>

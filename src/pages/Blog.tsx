@@ -44,7 +44,7 @@ const blogPosts: BlogPost[] = [
     date: 'Mar 10, 2026',
     readTime: '3 min read',
     category: 'Networking',
-    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://www.pynetlabs.com/wp-content/uploads/Types-of-Routing-Algorithm-in-Computer-Networks-1024x451.webp',
     pdfPath: '/pdfs/Essence_Chapter7.pdf',
   },
   {

@@ -44,8 +44,14 @@ const CV: React.FC = () => {
                   location="Hong Kong, China"
                   period="Sep 2023 - Present"
                 >
-                  <p>S.H.Ho College Master’s List Award 2025</p>
-                  <p className="mt-2">S.H.Ho College Outstanding Student Scholarship 2025/2026</p>
+                  
+                  <ul className="list-disc list-inside space-y-2">
+                    <li>S.H.Ho College Master’s List Award 2025</li>
+                    <li>S.H.Ho College Outstanding Student Scholarship 2025/2026</li>
+                    <li>Mandarin (native), Cantonese (fluent), English (fluent)</li>
+                  </ul>
+                  <p></p>
+                  <p className="mt-2">6</p>
                 </ExperienceItem>
               </div>
             </Card>
@@ -129,14 +135,21 @@ const CV: React.FC = () => {
               
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold text-primary-800 dark:text-primary-100">Research Assistant</h3>
-                  <p className="text-secondary-500">AIoT Lab • 2025 - Present</p>
+                  <h3 className="font-semibold text-primary-800 dark:text-primary-100">Standard Chartered Hong Kong Marathon 2026 Half Marathon Finisher</h3>
+                  <p className="text-secondary-500">HKAAA • 2026 </p>
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-primary-800 dark:text-primary-100">Academic Excellence</h3>
-                  <p className="text-secondary-500">The Chinese University of Hong Kong</p>
+                  <h3 className="font-semibold text-primary-800 dark:text-primary-100">Attendance Certificate for Course of Caregiver Stress</h3>
+                  <p className="text-secondary-500">CUHK Jockey Club
+Institute of Ageing • 2025</p>
                 </div>
+
+                <div>
+                  <h3 className="font-semibold text-primary-800 dark:text-primary-100">Certificate of Recognition for the LEAD 1001 Program</h3>
+                  <p className="text-secondary-500">Learning and Cultural Enhancement Section, CUHK • 2023</p>
+                </div>
+
               </div>
             </Card>
           </motion.div>

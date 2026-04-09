@@ -33,7 +33,7 @@ const Header: React.FC = () => {
       <div className="container-custom flex justify-between items-center">
         <div className="flex items-center">
           <NavLink to="/" className="text-xl md:text-2xl font-bold text-primary-900 dark:text-primary-50 hover:text-accent-600 dark:hover:text-accent-400 transition-colors duration-250">
-            FAN, Sixing <span className="text-secondary-500 font-normal">(范思行)</span>
+            FAN, Sixing 
           </NavLink>
         </div>
 

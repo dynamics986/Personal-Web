@@ -55,7 +55,7 @@ const blogPosts: BlogPost[] = [
     readTime: '10 min read',
     category: 'Tutorial',
     image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
-    pdfPath: '/pdfs/CV_Francis.pdf',
+    pdfPath: '/pdfs/beauty_math.pdf',
   },
 ];
 

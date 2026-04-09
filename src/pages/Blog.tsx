@@ -17,18 +17,28 @@ interface BlogPost {
 }
 
 const blogPosts: BlogPost[] = [
-  {
+   {
     id: '1',
-    title: 'FAN, Sixing - Academic Portfolio',
-    excerpt: 'My curriculum vitae detailing academic achievements and research experience. Includes projects, and technical skills.',
-    date: 'Apr 9, 2026',
-    readTime: '1 min read',
-    category: 'CV / Resume',
-    image: 'https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800',
-    pdfPath: '',
+    title: '数学之美（中文版）',
+    excerpt: 'Some of my reflections on university mathematics using natural language.',
+    date: 'Dec 14, 2025',
+    readTime: '10 min read',
+    category: 'Math',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdoG_BspduaT6vZWf6y7wuq7pFFUiwmML9Aw&s',
+    pdfPath: '/pdfs/数学之美.pdf',
+  },
+    {
+    id: '2',
+    title: 'The beauty of Mathematics (English Version)',
+    excerpt: 'Some of my reflections on university mathematics using natural language.',
+    date: 'Jan 31, 2026',
+    readTime: '10 min read',
+    category: 'Math',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdoG_BspduaT6vZWf6y7wuq7pFFUiwmML9Aw&s',
+    pdfPath: '/pdfs/beauty_math.pdf',
   },
   {
-    id: '2',
+    id: '3',
     title: 'IERG3310 Chapter 6',
     excerpt: 'Local Area Networks, Medium Access Control protocols, random access mechanisms (CSMA/CD, CSMA/CA).',
     date: 'Mar 15, 2026',
@@ -38,7 +48,7 @@ const blogPosts: BlogPost[] = [
     pdfPath: '/pdfs/Essence_Chapter6.pdf',
   },
   {
-    id: '3',
+    id: '4',
     title: 'IERG3310 Chapter 7',
     excerpt: 'Network layer functions, routing algorithms, and TCP congestion control mechanisms.',
     date: 'Mar 10, 2026',
@@ -47,16 +57,7 @@ const blogPosts: BlogPost[] = [
     image: 'https://www.pynetlabs.com/wp-content/uploads/Types-of-Routing-Algorithm-in-Computer-Networks-1024x451.webp',
     pdfPath: '/pdfs/Essence_Chapter7.pdf',
   },
-  {
-    id: '4',
-    title: 'The beauty of Mathematics',
-    excerpt: 'Some of my reflections on university mathematics using natural language.',
-    date: 'Jan 31, 2026',
-    readTime: '10 min read',
-    category: 'Math',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdoG_BspduaT6vZWf6y7wuq7pFFUiwmML9Aw&s',
-    pdfPath: '/pdfs/beauty_math.pdf',
-  },
+
 ];
 
 const Blog: React.FC = () => {

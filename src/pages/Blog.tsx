@@ -3,7 +3,7 @@ import PageTitle from '../components/common/PageTitle';
 import Card from '../components/common/Card';
 import Section from '../components/common/Section';
 import { motion } from 'framer-motion';
-import { Calendar, ChevronRight, Tag, Clock, FileText, Download, Eye } from 'lucide-react';
+import { Calendar, Clock, Tag, Eye, Download } from 'lucide-react';
 
 interface BlogPost {
   id: string;
@@ -20,7 +20,7 @@ const blogPosts: BlogPost[] = [
   {
     id: '1',
     title: 'Francis CV - Academic Portfolio',
-    excerpt: 'My comprehensive curriculum vitae detailing research experience in robotics, machine learning, and 3D scene generation. Includes publications, projects, and technical skills.',
+    excerpt: 'My curriculum vitae detailing academic achievements and research experience. Includes projects, and technical skills.',
     date: 'Apr 9, 2026',
     readTime: '3 min read',
     category: 'CV / Resume',
@@ -31,7 +31,7 @@ const blogPosts: BlogPost[] = [
     id: '2',
     title: 'Network Essentials - Chapter 6: LAN and MAC Protocols',
     excerpt: 'Comprehensive study of Local Area Networks, MAC protocols, random access mechanisms (CSMA/CD, CSMA/CA), and performance metrics.',
-    date: 'Jan 15, 2026',
+    date: 'Mar 15, 2026',
     readTime: '6 min read',
     category: 'Networking',
     image: 'https://images.pexels.com/photos/2085832/pexels-photo-2085832.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -41,7 +41,7 @@ const blogPosts: BlogPost[] = [
     id: '3',
     title: 'Network Essentials - Chapter 7: Routing and Congestion Control',
     excerpt: 'Deep dive into network layer functions, routing algorithms (distance-vector, link-state), and TCP congestion control mechanisms.',
-    date: 'Dec 10, 2025',
+    date: 'Mar 10, 2026',
     readTime: '8 min read',
     category: 'Networking',
     image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -55,16 +55,6 @@ const blogPosts: BlogPost[] = [
     readTime: '10 min read',
     category: 'Tutorial',
     image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
-    pdfPath: '/pdfs/CV_Francis.pdf',
-  },
-  {
-    id: '5',
-    title: 'Fourier Analysis in Signal Processing',
-    excerpt: 'A mathematical walkthrough of Fourier transforms and their applications in communication systems.',
-    date: 'Sep 5, 2025',
-    readTime: '7 min read',
-    category: 'Mathematics',
-    image: 'https://images.pexels.com/photos/6238297/pexels-photo-6238297.jpeg?auto=compress&cs=tinysrgb&w=800',
     pdfPath: '/pdfs/CV_Francis.pdf',
   },
 ];
@@ -94,14 +84,14 @@ interface BlogPostCardProps {
 }
 
 const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, index }) => {
-  const openPDF = () => {
-    window.open(post.pdfPath, '_blank');
+  const handleView = () => {
+    window.open(post.pdfPath, '_blank', 'noopener,noreferrer');
   };
 
-  const downloadPDF = () => {
+  const handleDownload = () => {
     const link = document.createElement('a');
     link.href = post.pdfPath;
-    link.download = `${post.title.replace(/[^a-z0-9]/gi, '_')}.pdf`;
+    link.setAttribute('download', `${post.title.replace(/[^a-z0-9]/gi, '_')}.pdf`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -113,7 +103,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, index }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
     >
-      <Card className="h-full flex flex-col overflow-hidden">
+      <Card className="h-full flex flex-col overflow-hidden border border-primary-100 dark:border-primary-800 hover:shadow-lg transition-shadow duration-300">
         <div className="h-48 overflow-hidden rounded-t-lg -mx-6 -mt-6 mb-4">
           <img 
             src={post.image} 
@@ -122,8 +112,8 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, index }) => {
           />
         </div>
         
-        <div className="flex items-center mb-3">
-          <span className="flex items-center text-xs text-secondary-500 dark:text-secondary-400 mr-4">
+        <div className="flex items-center mb-3 space-x-4">
+          <span className="flex items-center text-xs text-secondary-500 dark:text-secondary-400">
             <Calendar size={14} className="mr-1" />
             {post.date}
           </span>
@@ -133,37 +123,37 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, index }) => {
           </span>
         </div>
         
-        <h3 className="text-xl font-semibold text-primary-900 dark:text-primary-50 mb-2">
+        <h3 className="text-xl font-bold text-primary-900 dark:text-primary-50 mb-2 leading-snug">
           {post.title}
         </h3>
         
-        <p className="text-primary-600 dark:text-primary-300 mb-4 flex-grow">
+        <p className="text-primary-600 dark:text-primary-300 mb-6 flex-grow text-sm line-clamp-3">
           {post.excerpt}
         </p>
         
-        <div className="flex items-center justify-between mt-2">
-          <span className="flex items-center text-xs bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 px-2 py-1 rounded">
+        <div className="flex items-center justify-between mt-auto pt-4 border-t border-primary-50 dark:border-primary-800">
+          <span className="flex items-center text-[10px] uppercase tracking-wider font-bold bg-accent-100 dark:bg-accent-900/40 text-accent-700 dark:text-accent-400 px-2 py-1 rounded">
             <Tag size={12} className="mr-1" />
             {post.category}
           </span>
           
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <button
-              onClick={openPDF}
-              className="flex items-center text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-250"
-              title="View PDF"
+              onClick={handleView}
+              className="flex items-center text-primary-600 dark:text-primary-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors group"
+              aria-label="View PDF"
             >
-              <Eye size={14} className="mr-1" />
-              <span className="text-sm">View</span>
+              <Eye size={18} className="mr-1 group-hover:scale-110 transition-transform" />
+              <span className="text-sm font-semibold">View</span>
             </button>
             
             <button
-              onClick={downloadPDF}
-              className="flex items-center text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-250"
-              title="Download PDF"
+              onClick={handleDownload}
+              className="flex items-center text-primary-600 dark:text-primary-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors group"
+              aria-label="Download PDF"
             >
-              <Download size={14} className="mr-1" />
-              <span className="text-sm">Download</span>
+              <Download size={18} className="mr-1 group-hover:translate-y-0.5 transition-transform" />
+              <span className="text-sm font-semibold">Download</span>
             </button>
           </div>
         </div>

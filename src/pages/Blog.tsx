@@ -24,7 +24,7 @@ const blogPosts: BlogPost[] = [
     date: 'Apr 9, 2026',
     readTime: '1 min read',
     category: 'CV / Resume',
-    image: 'https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://encrypted-tbn0.gstatic.com/images q=tbn:ANd9GcQdoG_BspduaT6vZWf6y7wuq7pFFUiwmML9Aw&s',
     pdfPath: '/pdfs/CV_Francis.pdf',
   },
   {

@@ -49,9 +49,9 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: '4',
-    title: 'Blender Python (bpy) for 3D Scene Generation',
-    excerpt: 'A practical guide to using the Blender Python API for procedural 3D scene generation, covering object placement and rendering automation.',
-    date: 'Oct 22, 2025',
+    title: 'The beauty of Mathematics',
+    excerpt: 'Some of my reflections on university mathematics using natural language.',
+    date: 'Jan 31, 2026',
     readTime: '10 min read',
     category: 'Tutorial',
     image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',

@@ -3,8 +3,7 @@ import PageTitle from '../components/common/PageTitle';
 import Card from '../components/common/Card';
 import Section from '../components/common/Section';
 import { motion } from 'framer-motion';
-import { Calendar, ChevronRight, Tag, Clock } from 'lucide-react';
-
+import { Calendar, ChevronRight, Tag, Clock, FileText, Download, Eye } from 'lucide-react';
 
 interface BlogPost {
   id: string;
@@ -14,44 +13,59 @@ interface BlogPost {
   readTime: string;
   category: string;
   image: string;
+  pdfPath: string;
 }
 
 const blogPosts: BlogPost[] = [
   {
     id: '1',
-    title: 'Indoor Navigation with SSCS: A New Complexity Metric',
+    title: 'Francis CV - Academic Portfolio',
+    excerpt: 'My comprehensive curriculum vitae detailing research experience in robotics, machine learning, and 3D scene generation. Includes publications, projects, and technical skills.',
+    date: 'Apr 9, 2026',
+    readTime: '3 min read',
+    category: 'CV / Resume',
+    image: 'https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800',
+    pdfPath: '/pdfs/CV_Francis.pdf',
+  },
+  {
+    id: '2',
+    title: 'Indoor Navigation with SSCS: A New Metric',
     excerpt: 'Introducing the Static Scene Complexity Score (SSCS) — a quantitative metric for evaluating indoor scene complexity in robot navigation benchmarks.',
     date: 'Jan 15, 2026',
     readTime: '6 min read',
     category: 'Research',
     image: 'https://images.pexels.com/photos/2085832/pexels-photo-2085832.jpeg?auto=compress&cs=tinysrgb&w=800',
+    pdfPath: '/pdfs/CV_Francis.pdf', // 暂时复用同一个PDF，你可以替换成对应的
   },
   {
-    id: '2',
-    title: 'Bayesian Optimization for Procedural Scene Generation',
-    excerpt: 'How I used Bayesian optimization and interpolation sampling to significantly reduce the computational cost of generating diverse indoor scenes.',
+    id: '3',
+    title: 'Bayesian Optimization for Scene Generation',
+    excerpt: 'How I used Bayesian optimization to reduce computational cost of generating diverse indoor scenes by 70%.',
     date: 'Dec 10, 2025',
     readTime: '8 min read',
     category: 'Machine Learning',
     image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
+    pdfPath: '/pdfs/CV_Francis.pdf',
   },
   {
-    id: '3',
-    title: 'Getting Started with Blender Python (bpy) for Scene Generation',
-    excerpt: 'A practical guide to using the Blender Python API for procedural 3D scene generation, covering object placement, material assignment, and rendering automation.',
+    id: '4',
+    title: 'Blender Python (bpy) for 3D Scene Generation',
+    excerpt: 'A practical guide to using the Blender Python API for procedural 3D scene generation, covering object placement and rendering automation.',
     date: 'Oct 22, 2025',
     readTime: '10 min read',
     category: 'Tutorial',
     image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
+    pdfPath: '/pdfs/CV_Francis.pdf',
   },
   {
-    id: '4',
-    title: 'Understanding Fourier Analysis in Signal Processing',
-    excerpt: 'A mathematical walkthrough of Fourier transforms and their practical applications in communication systems and signal analysis.',
+    id: '5',
+    title: 'Fourier Analysis in Signal Processing',
+    excerpt: 'A mathematical walkthrough of Fourier transforms and their applications in communication systems.',
     date: 'Sep 5, 2025',
     readTime: '7 min read',
     category: 'Mathematics',
     image: 'https://images.pexels.com/photos/6238297/pexels-photo-6238297.jpeg?auto=compress&cs=tinysrgb&w=800',
+    pdfPath: '/pdfs/CV_Francis.pdf',
   },
 ];
 
@@ -59,11 +73,63 @@ const Blog: React.FC = () => {
   return (
     <>
       <PageTitle 
-        title="Blog" 
-        subtitle="Thoughts, tutorials, and insights on web development and technology"
+        title="Blog & Publications" 
+        subtitle="Research insights, technical tutorials, and my academic portfolio"
       />
       
       <Section>
+        {/* 高亮显示的 CV 卡片 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="mb-12"
+        >
+          <Card className="bg-gradient-to-r from-accent-50 to-primary-50 dark:from-accent-900/20 dark:to-primary-900/20 border-2 border-accent-200 dark:border-accent-800">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-2">
+                  <FileText size={24} className="text-accent-600 dark:text-accent-400" />
+                  <span className="text-sm font-semibold text-accent-600 dark:text-accent-400">Featured</span>
+                </div>
+                <h3 className="text-2xl font-bold text-primary-900 dark:text-primary-50 mb-2">
+                  Francis - Curriculum Vitae
+                </h3>
+                <p className="text-primary-600 dark:text-primary-300 mb-4">
+                  Complete academic and professional portfolio. Last updated: April 2026.
+                </p>
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => window.open('/pdfs/CV_Francis.pdf', '_blank')}
+                    className="flex items-center gap-2 px-4 py-2 bg-accent-600 text-white rounded-lg hover:bg-accent-700 transition-colors"
+                  >
+                    <Eye size={18} />
+                    <span>View CV</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/pdfs/CV_Francis.pdf';
+                      link.download = 'Francis_CV_2026.pdf';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                    className="flex items-center gap-2 px-4 py-2 border border-accent-600 text-accent-600 dark:text-accent-400 rounded-lg hover:bg-accent-50 dark:hover:bg-accent-900/30 transition-colors"
+                  >
+                    <Download size={18} />
+                    <span>Download PDF</span>
+                  </button>
+                </div>
+              </div>
+              <div className="hidden md:block">
+                <FileText size={80} className="text-accent-300 dark:text-accent-700" />
+              </div>
+            </div>
+          </Card>
+        </motion.div>
+
+        {/* 普通博客卡片列表 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {blogPosts.map((post, index) => (
             <BlogPostCard key={post.id} post={post} index={index} />
@@ -80,6 +146,19 @@ interface BlogPostCardProps {
 }
 
 const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, index }) => {
+  const openPDF = () => {
+    window.open(post.pdfPath, '_blank');
+  };
+
+  const downloadPDF = () => {
+    const link = document.createElement('a');
+    link.href = post.pdfPath;
+    link.download = `${post.title.replace(/[^a-z0-9]/gi, '_')}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -120,10 +199,25 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, index }) => {
             {post.category}
           </span>
           
-          <a href="#" className="flex items-center text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-250">
-            <span className="text-sm mr-1">Read more</span>
-            <ChevronRight size={16} />
-          </a>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={openPDF}
+              className="flex items-center text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-250"
+              title="View PDF"
+            >
+              <Eye size={14} className="mr-1" />
+              <span className="text-sm">View</span>
+            </button>
+            
+            <button
+              onClick={downloadPDF}
+              className="flex items-center text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors duration-250"
+              title="Download PDF"
+            >
+              <Download size={14} className="mr-1" />
+              <span className="text-sm">Download</span>
+            </button>
+          </div>
         </div>
       </Card>
     </motion.div>

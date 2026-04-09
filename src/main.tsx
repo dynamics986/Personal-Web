@@ -5,6 +5,8 @@ import App from './App';
 import { ThemeProvider } from './context/ThemeContext';
 import './index.css';
 
+const basename = import.meta.env.DEV ? '/' : '/Personal-Web/';
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>

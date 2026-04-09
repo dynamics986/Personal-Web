@@ -29,23 +29,23 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: '2',
-    title: 'Indoor Navigation with SSCS: A New Metric',
-    excerpt: 'Introducing the Static Scene Complexity Score (SSCS) — a quantitative metric for evaluating indoor scene complexity in robot navigation benchmarks.',
+    title: 'Network Essentials - Chapter 6: LAN and MAC Protocols',
+    excerpt: 'Comprehensive study of Local Area Networks, MAC protocols, random access mechanisms (CSMA/CD, CSMA/CA), and performance metrics.',
     date: 'Jan 15, 2026',
     readTime: '6 min read',
-    category: 'Research',
+    category: 'Networking',
     image: 'https://images.pexels.com/photos/2085832/pexels-photo-2085832.jpeg?auto=compress&cs=tinysrgb&w=800',
-    pdfPath: '/pdfs/CV_Francis.pdf', // 暂时复用同一个PDF，你可以替换成对应的
+    pdfPath: '/pdfs/Essence_Chapter6.pdf',
   },
   {
     id: '3',
-    title: 'Bayesian Optimization for Scene Generation',
-    excerpt: 'How I used Bayesian optimization to reduce computational cost of generating diverse indoor scenes by 70%.',
+    title: 'Network Essentials - Chapter 7: Routing and Congestion Control',
+    excerpt: 'Deep dive into network layer functions, routing algorithms (distance-vector, link-state), and TCP congestion control mechanisms.',
     date: 'Dec 10, 2025',
     readTime: '8 min read',
-    category: 'Machine Learning',
+    category: 'Networking',
     image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
-    pdfPath: '/pdfs/CV_Francis.pdf',
+    pdfPath: '/pdfs/Essence_Chapter7.pdf',
   },
   {
     id: '4',
@@ -72,11 +72,12 @@ const blogPosts: BlogPost[] = [
 const Blog: React.FC = () => {
   return (
     <>
-      <PageTitle 
-        title="Blog & Publications" 
+      <PageTitle
+        title="Blog & Publications"
         subtitle="Research insights, technical tutorials, and my academic portfolio"
       />
-      
+
+      <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {blogPosts.map((post, index) => (
             <BlogPostCard key={post.id} post={post} index={index} />

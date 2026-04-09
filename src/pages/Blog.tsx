@@ -16,6 +16,44 @@ interface BlogPost {
   image: string;
 }
 
+const blogPosts: BlogPost[] = [
+  {
+    id: '1',
+    title: 'Indoor Navigation with SSCS: A New Complexity Metric',
+    excerpt: 'Introducing the Static Scene Complexity Score (SSCS) — a quantitative metric for evaluating indoor scene complexity in robot navigation benchmarks.',
+    date: 'Jan 15, 2026',
+    readTime: '6 min read',
+    category: 'Research',
+    image: 'https://images.pexels.com/photos/2085832/pexels-photo-2085832.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
+  {
+    id: '2',
+    title: 'Bayesian Optimization for Procedural Scene Generation',
+    excerpt: 'How I used Bayesian optimization and interpolation sampling to significantly reduce the computational cost of generating diverse indoor scenes.',
+    date: 'Dec 10, 2025',
+    readTime: '8 min read',
+    category: 'Machine Learning',
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
+  {
+    id: '3',
+    title: 'Getting Started with Blender Python (bpy) for Scene Generation',
+    excerpt: 'A practical guide to using the Blender Python API for procedural 3D scene generation, covering object placement, material assignment, and rendering automation.',
+    date: 'Oct 22, 2025',
+    readTime: '10 min read',
+    category: 'Tutorial',
+    image: 'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
+  {
+    id: '4',
+    title: 'Understanding Fourier Analysis in Signal Processing',
+    excerpt: 'A mathematical walkthrough of Fourier transforms and their practical applications in communication systems and signal analysis.',
+    date: 'Sep 5, 2025',
+    readTime: '7 min read',
+    category: 'Mathematics',
+    image: 'https://images.pexels.com/photos/6238297/pexels-photo-6238297.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
+];
 
 const Blog: React.FC = () => {
   return (

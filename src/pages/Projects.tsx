@@ -31,7 +31,7 @@ const projects: Project[] = [
     id: '2',
     title: 'SSCS Optimizer',
     description: 'A complexity-aware procedural generator built on top of Infinigen, enabling controlled generation of indoor scenes with quantifiable static complexity. ',
-    image: 'https://public.ysjf.com/product/preview/JJWze1I5l6.jpg',
+    image: 'https://infinigen.org/img/random_sample.jpeg',
     technologies: ['Python', 'C', 'C Shell', 'Cuda', 'bpy'],
     githubUrl: 'https://github.com/dynamics986/SSCS-Optimizer',
     category: 'Python'

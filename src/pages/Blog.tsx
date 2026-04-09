@@ -34,7 +34,7 @@ const blogPosts: BlogPost[] = [
     date: 'Mar 15, 2026',
     readTime: '3 min read',
     category: 'Networking',
-    image: 'https://images.pexels.com/photos/2085832/pexels-photo-2085832.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmU0YvmukmvjVQwl-qtmzbHUq3ti1kKizYQg&s',
     pdfPath: '/pdfs/Essence_Chapter6.pdf',
   },
   {

@@ -42,7 +42,7 @@ const CV: React.FC = () => {
                   title="B.S. in Mathematics and Information Engineering"
                   company="The Chinese University of Hong Kong"
                   location="Hong Kong, China"
-                  period="2022 - Present"
+                  period="Sep 2023 - Present"
                 >
                   <p>Studying Mathematics and Information Engineering with focus on artificial intelligence, engineering systems, and spatial engineering.</p>
                   <p className="mt-2">Self-learning machine learning algorithms including K-Means, CNN, and RNN. Research interests include positioning systems, network systems, control theory, robot indoor navigation, and UAV control and communication.</p>
@@ -93,23 +93,23 @@ const CV: React.FC = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4">
                 <SkillCategory
-                  title="Machine Learning"
-                  skills={['K-Means', 'CNN', 'RNN', 'Neural Networks', 'Deep Learning']}
+                  title="Tools"
+                  skills={['VS Code', 'Cursor', 'GitHub', 'Blender', 'Linux System ', 'Wireshark/tcpdump']}
                 />
 
                 <SkillCategory
                   title="Mathematics"
-                  skills={['Probability Theory', 'Linear Algebra', 'Statistics', 'Optimization']}
+                  skills={['Calculus', 'Linear Algebra', 'Fourier Analysis', 'Complex Analysis', 'Algebraic Structures', 'Numerical Optimization', 'Discrete Math', 'Probability Theory',]}
                 />
 
                 <SkillCategory
-                  title="Engineering"
+                  title="Research Interest"
                   skills={['Positioning Systems', 'Network Systems', 'Control Theory', 'Robotics', 'UAV Systems']}
                 />
 
                 <SkillCategory
                   title="Programming & Tools"
-                  skills={['Python', 'MATLAB', 'C++', 'Git', 'ROS']}
+                  skills={['C', 'Java', 'Python', 'MATLAB']}
                 />
               </div>
             </Card>

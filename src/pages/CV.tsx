@@ -92,16 +92,17 @@ const CV: React.FC = () => {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4">
-                <SkillCategory
-                  title="Tools"
-                  skills={['VS Code', 'Cursor', 'GitHub', 'Blender', 'Linux System ', 'Wireshark/tcpdump']}
-                />
 
                 <SkillCategory
                   title="Mathematics"
                   skills={['Calculus', 'Linear Algebra', 'Fourier Analysis', 'Complex Analysis', 'Algebraic Structures', 'Numerical Optimization', 'Discrete Math', 'Probability Theory',]}
                 />
-
+                
+                <SkillCategory
+                  title="Programming & Tools"
+                  skills={['C', 'Java', 'Python', 'MATLAB', 'VS Code', 'Cursor', 'GitHub', 'Blender', 'Linux System ', 'Gazebo', 'Wireshark/tcpdump']}
+                />
+                
                 <SkillCategory
                   title="Research Interest"
                   skills={['Positioning Systems', 'Network Systems', 'Control Theory', 'Robotics', 'UAV Systems']}

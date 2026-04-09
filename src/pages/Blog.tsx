@@ -29,8 +29,8 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: '2',
-    title: 'IERG3310 Chapter 6: LAN and MAC Protocols',
-    excerpt: 'Local Area Networks, MAC protocols, random access mechanisms (CSMA/CD, CSMA/CA).',
+    title: 'IERG3310 Chapter 6',
+    excerpt: 'Local Area Networks, Medium Access Control protocols, random access mechanisms (CSMA/CD, CSMA/CA).',
     date: 'Mar 15, 2026',
     readTime: '3 min read',
     category: 'Networking',
@@ -39,7 +39,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: '3',
-    title: 'IERG3310 Chapter 7: Routing and Congestion Control',
+    title: 'IERG3310 Chapter 7',
     excerpt: 'Network layer functions, routing algorithms, and TCP congestion control mechanisms.',
     date: 'Mar 10, 2026',
     readTime: '3 min read',

@@ -25,7 +25,7 @@ const blogPosts: BlogPost[] = [
     readTime: '1 min read',
     category: 'CV / Resume',
     image: 'https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800',
-    pdfPath: '/pdfs/CV_Francis.pdf',
+    pdfPath: '',
   },
   {
     id: '2',

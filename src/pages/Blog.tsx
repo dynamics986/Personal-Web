@@ -53,7 +53,7 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Some of my reflections on university mathematics using natural language.',
     date: 'Jan 31, 2026',
     readTime: '10 min read',
-    category: 'Tutorial',
+    category: 'Math',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdoG_BspduaT6vZWf6y7wuq7pFFUiwmML9Aw&s',
     pdfPath: '/pdfs/beauty_math.pdf',
   },

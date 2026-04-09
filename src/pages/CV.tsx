@@ -33,35 +33,6 @@ const CV: React.FC = () => {
           >
             <Card className="mb-8">
               <div className="flex items-center mb-4">
-                <Briefcase className="w-6 h-6 text-accent-500 mr-3" />
-                <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50">Research Experience</h2>
-              </div>
-
-              <div className="space-y-6">
-                <ExperienceItem
-                  title="Undergraduate Research Assistant"
-                  company="AIoT Lab"
-                  location="Hong Kong, China"
-                  period="June 2025 - Present"
-                >
-                  <ul className="list-disc list-inside space-y-2">
-                    <li>Conducting research on robot indoor navigation systems and positioning algorithms</li>
-                    <li>Working on UAV control systems and communication protocols</li>
-                    <li>Exploring interdisciplinary topics at the intersection of human-centered AI and robotics</li>
-                    <li>Applying probability theory and linear algebra to solve spatial engineering problems</li>
-                  </ul>
-                </ExperienceItem>
-              </div>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-          >
-            <Card className="mb-8">
-              <div className="flex items-center mb-4">
                 <GraduationCap className="w-6 h-6 text-accent-500 mr-3" />
                 <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50">Education</h2>
               </div>
@@ -75,6 +46,35 @@ const CV: React.FC = () => {
                 >
                   <p>Studying Mathematics and Information Engineering with focus on artificial intelligence, engineering systems, and spatial engineering.</p>
                   <p className="mt-2">Self-learning machine learning algorithms including K-Means, CNN, and RNN. Research interests include positioning systems, network systems, control theory, robot indoor navigation, and UAV control and communication.</p>
+                </ExperienceItem>
+              </div>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+          >
+            <Card className="mb-8">
+              <div className="flex items-center mb-4">
+                <Briefcase className="w-6 h-6 text-accent-500 mr-3" />
+                <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50">Research Experience</h2>
+              </div>
+
+              <div className="space-y-6">
+                <ExperienceItem
+                  title="Research Assistant"
+                  company="AIoT Lab"
+                  location="Hong Kong, China"
+                  period="Jun 2025 - Feb 2026"
+                >
+                  <ul className="list-disc list-inside space-y-2">
+                    <li>Formulated Static Scene Complexity Score (SSCS) to evaluate the indoor scene complexity</li>
+                    <li>Developed a SSCS optimizer for generating indoor scenes of various scene complexity</li>
+                    <li>Used interpolation sampling and Bayesian optimization to improve the efficiency of the system</li>
+                    <li>Generated 50+ distinct scenes with customized objects with the system for indoor navigation test</li>
+                  </ul>
                 </ExperienceItem>
               </div>
             </Card>

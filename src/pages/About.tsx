@@ -24,7 +24,6 @@ const About: React.FC = () => {
                   className="w-40 h-40 object-cover rounded-full mb-4"
                 />
                 <h2 className="text-xl font-semibold text-primary-900 dark:text-primary-50">FAN, Sixing</h2>
-                <p className="text-secondary-500 dark:text-secondary-400 mb-4">范思行</p>
 
                 <div className="w-full space-y-3 mt-2">
                   <div className="flex items-center text-primary-700 dark:text-primary-300">

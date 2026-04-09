@@ -29,7 +29,7 @@ const blogPosts: BlogPost[] = [
   },
     {
     id: '2',
-    title: 'The beauty of Mathematics (English Version)',
+    title: 'The beauty of Mathematics (English)',
     excerpt: 'Some of my reflections on university mathematics using natural language.',
     date: 'Jan 31, 2026',
     readTime: '10 min read',

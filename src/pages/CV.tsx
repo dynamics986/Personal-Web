@@ -95,7 +95,7 @@ const CV: React.FC = () => {
 
                 <SkillCategory
                   title="Mathematics"
-                  skills={['Calculus', 'Linear Algebra', 'Fourier Analysis', 'Complex Analysis', 'Algebraic Structures', 'Numerical Optimization', 'Discrete Math', 'Probability Theory',]}
+                  skills={['Calculus', 'Linear Algebra', 'Fourier Analysis', 'Complex Analysis', 'Algebraic Structures', 'Discrete Math', 'Probability Theory']}
                 />
                 
                 <SkillCategory
@@ -105,12 +105,12 @@ const CV: React.FC = () => {
                 
                 <SkillCategory
                   title="Research Interest"
-                  skills={['Positioning Systems', 'Network Systems', 'Control Theory', 'Robotics', 'UAV Systems']}
+                  skills={['Positioning Systems', 'Network Systems', 'Control Theory', 'UAV Systems']}
                 />
 
                 <SkillCategory
-                  title="Programming & Tools"
-                  skills={['C', 'Java', 'Python', 'MATLAB']}
+                  title="Engineering Courses"
+                  skills={['Numerical Optimization', 'Data Structures', 'Communication Systems', 'Computer Network']}
                 />
               </div>
             </Card>

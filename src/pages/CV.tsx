@@ -44,8 +44,8 @@ const CV: React.FC = () => {
                   location="Hong Kong, China"
                   period="Sep 2023 - Present"
                 >
-                  <p>Studying Mathematics and Information Engineering with focus on artificial intelligence, engineering systems, and spatial engineering.</p>
-                  <p className="mt-2">Self-learning machine learning algorithms including K-Means, CNN, and RNN. Research interests include positioning systems, network systems, control theory, robot indoor navigation, and UAV control and communication.</p>
+                  <p>S.H.Ho College Master’s List Award 2025</p>
+                  <p className="mt-2">S.H.Ho College Outstanding Student Scholarship 2025/2026</p>
                 </ExperienceItem>
               </div>
             </Card>

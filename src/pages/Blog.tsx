@@ -2,9 +2,9 @@ import React from 'react';
 import PageTitle from '../components/common/PageTitle';
 import Card from '../components/common/Card';
 import Section from '../components/common/Section';
-
-import { Calendar, ChevronRight, Tag, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Calendar, ChevronRight, Tag, Clock } from 'lucide-react';
+
 
 interface BlogPost {
   id: string;
@@ -16,26 +16,6 @@ interface BlogPost {
   image: string;
 }
 
-const projects: Project[] = [
-  {
-    id: '1',
-    title: 'C programming',
-    description: 'This repository contains my exploration of C programming, organized into different branches based on complexity and purpose.',
-    image: 'https://public.ysjf.com/product/preview/cT9mqPVWS6.jpg',
-    technologies: ['C', 'Data Structures', 'Advanced Memory Management'],
-    githubUrl: 'https://github.com/dynamics986/C-Basics',
-    category: 'Logic Training'
-  },
-  {
-    id: '2',
-    title: 'SSCS Optimizer',
-    description: 'A complexity-aware procedural generator built on top of Infinigen, enabling controlled generation of indoor scenes with quantifiable static complexity. ',
-    image: 'https://public.ysjf.com/product/preview/JJWze1I5l6.jpg',
-    technologies: ['Python', 'C', 'C Shell', 'Cuda', 'bpy'],
-    githubUrl: 'https://github.com/dynamics986/SSCS-Optimizer',
-    category: 'mobile computing'
-  },
-];
 
 const Blog: React.FC = () => {
   return (

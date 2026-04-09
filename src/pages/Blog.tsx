@@ -77,59 +77,6 @@ const Blog: React.FC = () => {
         subtitle="Research insights, technical tutorials, and my academic portfolio"
       />
       
-      <Section>
-        {/* 高亮显示的 CV 卡片 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="mb-12"
-        >
-          <Card className="bg-gradient-to-r from-accent-50 to-primary-50 dark:from-accent-900/20 dark:to-primary-900/20 border-2 border-accent-200 dark:border-accent-800">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-2">
-                  <FileText size={24} className="text-accent-600 dark:text-accent-400" />
-                  <span className="text-sm font-semibold text-accent-600 dark:text-accent-400">Featured</span>
-                </div>
-                <h3 className="text-2xl font-bold text-primary-900 dark:text-primary-50 mb-2">
-                  Francis - Curriculum Vitae
-                </h3>
-                <p className="text-primary-600 dark:text-primary-300 mb-4">
-                  Complete academic and professional portfolio. Last updated: April 2026.
-                </p>
-                <div className="flex gap-3">
-                  <button
-                    onClick={() => window.open('/pdfs/CV_Francis.pdf', '_blank')}
-                    className="flex items-center gap-2 px-4 py-2 bg-accent-600 text-white rounded-lg hover:bg-accent-700 transition-colors"
-                  >
-                    <Eye size={18} />
-                    <span>View CV</span>
-                  </button>
-                  <button
-                    onClick={() => {
-                      const link = document.createElement('a');
-                      link.href = '/pdfs/CV_Francis.pdf';
-                      link.download = 'Francis_CV_2026.pdf';
-                      document.body.appendChild(link);
-                      link.click();
-                      document.body.removeChild(link);
-                    }}
-                    className="flex items-center gap-2 px-4 py-2 border border-accent-600 text-accent-600 dark:text-accent-400 rounded-lg hover:bg-accent-50 dark:hover:bg-accent-900/30 transition-colors"
-                  >
-                    <Download size={18} />
-                    <span>Download PDF</span>
-                  </button>
-                </div>
-              </div>
-              <div className="hidden md:block">
-                <FileText size={80} className="text-accent-300 dark:text-accent-700" />
-              </div>
-            </div>
-          </Card>
-        </motion.div>
-
-        {/* 普通博客卡片列表 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {blogPosts.map((post, index) => (
             <BlogPostCard key={post.id} post={post} index={index} />

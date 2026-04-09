@@ -76,24 +76,6 @@ const About: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50 mt-12 mb-6">Research Experience</h2>
-
-              <div className="space-y-6">
-                <TimelineItem
-                  icon={<Briefcase size={18} />}
-                  title="Robot Navigation, Research Assistant"
-                  company="AIoT Lab"
-                  period="Jun 2025 – Feb 2026"
-                >
-                  <ul className="list-disc list-inside space-y-1 text-primary-700 dark:text-primary-300">
-                    <li>Formulated Static Scene Complexity Score (SSCS) to evaluate the indoor scene complexity</li>
-                    <li>Developed a SSCS optimizer for generating indoor scenes of various scene complexity</li>
-                    <li>Used interpolation sampling and Bayesian optimization to improve the efficiency of the system</li>
-                    <li>Generated 50+ distinct scenes with customized objects with the system for indoor navigation test</li>
-                  </ul>
-                </TimelineItem>
-              </div>
-              
               <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50 mt-12 mb-6">Education</h2>
 
               <div className="space-y-6">
@@ -112,7 +94,26 @@ const About: React.FC = () => {
                   </ul>
                   </div>
                 </TimelineItem>
+              </div>              
+              
+              <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50 mt-12 mb-6">Research Experience</h2>
+
+              <div className="space-y-6">
+                <TimelineItem
+                  icon={<Briefcase size={18} />}
+                  title="Robot Navigation, Research Assistant"
+                  company="AIoT Lab"
+                  period="Jun 2025 – Feb 2026"
+                >
+                  <ul className="list-disc list-inside space-y-1 text-primary-700 dark:text-primary-300">
+                    <li>Formulated Static Scene Complexity Score (SSCS) to evaluate the indoor scene complexity</li>
+                    <li>Developed a SSCS optimizer for generating indoor scenes of various scene complexity</li>
+                    <li>Used interpolation sampling and Bayesian optimization to improve the efficiency of the system</li>
+                    <li>Generated 50+ distinct scenes with customized objects with the system for indoor navigation test</li>
+                  </ul>
+                </TimelineItem>
               </div>
+
             </motion.div>
           </div>
         </div>

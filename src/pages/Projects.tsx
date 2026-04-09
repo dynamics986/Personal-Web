@@ -25,7 +25,7 @@ const projects: Project[] = [
     image: 'https://public.ysjf.com/product/preview/cT9mqPVWS6.jpg',
     technologies: ['C', 'Data Structures', 'Advanced Memory Management'],
     githubUrl: 'https://github.com/dynamics986/C-Basics',
-    category: 'Logic Training'
+    category: 'C'
   },
   {
     id: '2',
@@ -34,7 +34,7 @@ const projects: Project[] = [
     image: 'https://public.ysjf.com/product/preview/JJWze1I5l6.jpg',
     technologies: ['Python', 'C', 'C Shell', 'Cuda', 'bpy'],
     githubUrl: 'https://github.com/dynamics986/SSCS-Optimizer',
-    category: 'mobile computing'
+    category: 'Python'
   },
 ];
 
@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
       <Section>
         <div className="flex justify-center mb-8">
           <div className="flex space-x-2 bg-primary-100 dark:bg-primary-800 p-1 rounded-lg">
-            {['all', 'web', 'mobile', 'other'].map((filter) => (
+            {['all', 'C', 'Python', 'other'].map((filter) => (
               <button
                 key={filter}
                 className={clsx(

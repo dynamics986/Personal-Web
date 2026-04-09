@@ -24,7 +24,7 @@ const blogPosts: BlogPost[] = [
     date: 'Dec 14, 2025',
     readTime: '10 min read',
     category: 'Math',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdoG_BspduaT6vZWf6y7wuq7pFFUiwmML9Aw&s',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGLAowcImpxi43qSHNcdcfmCQ2WXNSIvLrQ&s',
     pdfPath: '/pdfs/数学之美.pdf',
   },
     {

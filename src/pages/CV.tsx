@@ -44,14 +44,11 @@ const CV: React.FC = () => {
                   location="Hong Kong, China"
                   period="Sep 2023 - Present"
                 >
-                  
                   <ul className="list-disc list-inside space-y-2">
                     <li>S.H.Ho College Master’s List Award 2025</li>
                     <li>S.H.Ho College Outstanding Student Scholarship 2025/2026</li>
                     <li>Mandarin (native), Cantonese (fluent), English (fluent)</li>
                   </ul>
-                  <p></p>
-                  <p className="mt-2">6</p>
                 </ExperienceItem>
               </div>
             </Card>

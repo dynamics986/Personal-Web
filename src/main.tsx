@@ -10,7 +10,7 @@ const basename = import.meta.env.DEV ? '/' : '/Personal-Web/';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
-      <Router>
+      <Router basename={basename}> 
         <App />
       </Router>
     </ThemeProvider>

@@ -10,7 +10,7 @@ const About: React.FC = () => {
     <>
       <PageTitle 
         title="About Me"
-        subtitle="Mathematics & Information Engineering Student"
+        subtitle=""
       />
       
       <Section>
@@ -18,11 +18,7 @@ const About: React.FC = () => {
           <div className="lg:col-span-1">
             <Card className="sticky top-24">
               <div className="flex flex-col items-center">
-                <img 
-                  src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                  alt="FAN, Sixing" 
-                  className="w-40 h-40 object-cover rounded-full mb-4"
-                />
+                
                 <h2 className="text-xl font-semibold text-primary-900 dark:text-primary-50">FAN, Sixing</h2>
 
                 <div className="w-full space-y-3 mt-2">
@@ -32,7 +28,7 @@ const About: React.FC = () => {
                   </div>
                   <div className="flex items-center text-primary-700 dark:text-primary-300">
                     <MapPin size={16} className="mr-2 text-accent-500" />
-                    <span>Hong Kong, China</span>
+                    <span>Sha Tin, Hong Kong, China</span>
                   </div>
                   <div className="flex items-center text-primary-700 dark:text-primary-300">
                     <Mail size={16} className="mr-2 text-accent-500" />
@@ -63,7 +59,7 @@ const About: React.FC = () => {
               <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50 mb-4">Biography</h2>
               <div className="space-y-4 text-primary-700 dark:text-primary-300">
                 <p>
-                  Hello! I'm FAN, Sixing, an undergraduate student majoring in Mathematics and Information Engineering. I choose my major because the useful theories and logical thinking I developed in math help me go further in engineering topics like artificial intelligence and engineering systems. With tools like probability theory and linear algebra, I self-learned various machine learning algorithms in my spare time, like K-Means algorithms, CNN and RNN. 
+                  Hello! I'm FAN, Sixing, an undergraduate student majoring in Mathematics and Information Engineering at CUHK. I choose my major because the useful theories and logical thinking I developed in math help me go further in engineering topics like artificial intelligence and engineering systems. With tools like probability theory and linear algebra, I self-learned various machine learning algorithms in my spare time, like K-Means algorithms, CNN and RNN. 
                 </p>
                 <p>
                   Continuous learning, engineering innovation and academic connection never fail to fascinate me. I have been in AIoT Lab as an undergraduate student since June 2025. My passion is on spatial engineering topics such as positioning systems, network systems and control theory. I had research on robot indoor navigation and UAV control and communication. My current research is in an interdisciplinary field at the intersection of human-centered AI and robotics.

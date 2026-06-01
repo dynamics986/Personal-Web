@@ -16,6 +16,8 @@ interface BlogPost {
   pdfPath: string;
 }
 
+const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 const blogPosts: BlogPost[] = [
    {
     id: '1',
@@ -25,7 +27,7 @@ const blogPosts: BlogPost[] = [
     readTime: '10 min read',
     category: 'Math',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGLAowcImpxi43qSHNcdcfmCQ2WXNSIvLrQ&s',
-    pdfPath: '/pdfs/数学之美.pdf',
+    pdfPath: publicAsset('pdfs/数学之美.pdf'),
   },
     {
     id: '2',
@@ -35,7 +37,7 @@ const blogPosts: BlogPost[] = [
     readTime: '10 min read',
     category: 'Math',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdoG_BspduaT6vZWf6y7wuq7pFFUiwmML9Aw&s',
-    pdfPath: '/pdfs/beauty_math.pdf',
+    pdfPath: publicAsset('pdfs/beauty_math.pdf'),
   },
   {
     id: '3',
@@ -45,7 +47,7 @@ const blogPosts: BlogPost[] = [
     readTime: '3 min read',
     category: 'Networking',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmU0YvmukmvjVQwl-qtmzbHUq3ti1kKizYQg&s',
-    pdfPath: '/pdfs/Essence_Chapter6.pdf',
+    pdfPath: publicAsset('pdfs/Essence_Chapter6.pdf'),
   },
   {
     id: '4',
@@ -55,7 +57,7 @@ const blogPosts: BlogPost[] = [
     readTime: '3 min read',
     category: 'Networking',
     image: 'https://www.pynetlabs.com/wp-content/uploads/Types-of-Routing-Algorithm-in-Computer-Networks-1024x451.webp',
-    pdfPath: '/pdfs/Essence_Chapter7.pdf',
+    pdfPath: publicAsset('pdfs/Essence_Chapter7.pdf'),
   },
 
 ];

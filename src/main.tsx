@@ -1,16 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import App from './App';
 import { ThemeProvider } from './context/ThemeContext';
 import './index.css';
 
-const basename = import.meta.env.DEV ? '/' : '/Personal-Web/';
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
-      <Router basename={basename}> 
+      <Router>
         <App />
       </Router>
     </ThemeProvider>

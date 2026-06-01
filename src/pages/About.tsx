@@ -3,7 +3,7 @@ import PageTitle from '../components/common/PageTitle';
 import Card from '../components/common/Card';
 import Section from '../components/common/Section';
 import { motion } from 'framer-motion';
-import { Briefcase, GraduationCap, Award, Mail, MapPin, Calendar } from 'lucide-react';
+import { Briefcase, GraduationCap, Mail, MapPin, Calendar } from 'lucide-react';
 
 const About: React.FC = () => {
   return (

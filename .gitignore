@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+lessons.md
+.bolt/
 
 # Editor directories and files
 .vscode/*

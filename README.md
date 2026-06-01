@@ -1,42 +1,63 @@
-# Personal-Web
+# FAN, Sixing Personal Website
 
-[Edit in StackBlitz next generation editor](https://stackblitz.com/~/github.com/dynamics986/Personal-Web)
+Live site: https://dynamics986.github.io/Personal-Web/#/
 
-Demo: https://dynamics986-personal-xvzv.bolt.host
+This repository contains the source code for my personal academic and project portfolio website. The site introduces my background as a Mathematics and Information Engineering undergraduate student, highlights my research experience, shares blog and publication PDFs, presents selected programming and research projects, and provides a downloadable CV.
 
-## GitHub Pages deployment
+## Features
 
-This is a static Vite + React app. GitHub Pages only needs the generated `dist` folder; it does not run Node.js, Express, Python, PHP, or a database in production.
+- Responsive personal profile with biography, education, skills, and research experience.
+- Blog and publications section with view/download support for PDF materials.
+- Projects page with filtering and external GitHub project links.
+- CV page with a downloadable PDF resume.
+- Dark/light theme support with persisted user preference.
+- Static GitHub Pages deployment with hash routing for reliable refresh behavior.
 
-The Vite `base` is configured as `/Personal-Web/`, so built CSS, JavaScript, and public assets resolve under:
+## Technology Stack
 
-```text
-https://<username>.github.io/Personal-Web/
-```
+- **React 18**: component-based frontend UI.
+- **TypeScript**: type-safe application code and safer refactoring.
+- **Vite**: fast local development server and optimized production builds.
+- **React Router**: client-side routing between About, Blog, Projects, and CV pages.
+- **Tailwind CSS**: utility-first styling for responsive layouts and consistent design.
+- **Framer Motion**: smooth page and card animations.
+- **Lucide React**: clean, lightweight icon components.
+- **GitHub Actions**: automated build and deployment to GitHub Pages.
 
-The app uses React Router's hash routing (`/#/blog`, `/#/projects`, `/#/cv`) so refreshing a nested page on GitHub Pages does not produce a 404.
+## Project Advantages
 
-### Deploy with GitHub Actions
+- **Fully static hosting compatible**: the production site is built into `dist` and can be served by GitHub Pages without a backend server.
+- **Correct asset paths for project pages**: Vite is configured with `/Personal-Web/` as the base path, so JavaScript, CSS, and PDF assets load correctly under the GitHub Pages subpath.
+- **Maintainable structure**: pages, layout components, reusable UI components, theme context, and static assets are separated clearly.
 
-1. Push the repository to GitHub.
-2. In the repository settings, open **Pages**.
-3. Set **Source** to **GitHub Actions**.
-4. Push to the `main` branch, or run the "Deploy to GitHub Pages" workflow manually.
+## Local Development
 
-The workflow runs:
+Install dependencies:
 
 ```bash
 npm ci
-npm run build
 ```
 
-and publishes `dist`.
-
-### Manual build
+Start the development server:
 
 ```bash
-npm ci
+npm run dev
+```
+
+Build the production site:
+
+```bash
 npm run build
 ```
 
-The static output folder is `dist`. If you deploy manually instead of using the workflow, publish the contents of `dist` to GitHub Pages.
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+Run lint checks:
+
+```bash
+npm run lint
+```

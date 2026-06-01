@@ -5,6 +5,8 @@ import Section from '../components/common/Section';
 import { motion } from 'framer-motion';
 import { Briefcase, GraduationCap, Mail, MapPin, Calendar } from 'lucide-react';
 
+const cvPdfUrl = `${import.meta.env.BASE_URL}pdfs/Francis_CV.pdf`;
+
 const About: React.FC = () => {
   return (
     <>
@@ -38,7 +40,8 @@ const About: React.FC = () => {
                 
                 <div className="flex mt-6 space-x-3">
                   <a 
-                    href="#" 
+                    href={cvPdfUrl}
+                    download="Francis_CV.pdf"
                     className="px-4 py-2 bg-accent-500 text-white rounded-md hover:bg-accent-600 transition-colors duration-250"
                   >
                     Download CV

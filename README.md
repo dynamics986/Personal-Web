@@ -1,6 +1,8 @@
 # FAN, Sixing Personal Website
 
-Live site: https://dynamics986.github.io/Personal-Web/#/
+Live site: https://fansixing.com/#/
+
+GitHub Pages fallback URL: https://dynamics986.github.io/Personal-Web/#/
 
 This repository contains the source code for my personal academic and project portfolio website. The site introduces my background as a Mathematics and Information Engineering undergraduate student, highlights my research experience, shares blog and publication PDFs, presents selected programming and research projects, and provides a downloadable CV.
 
@@ -27,7 +29,7 @@ This repository contains the source code for my personal academic and project po
 ## Project Advantages
 
 - **Fully static hosting compatible**: the production site is built into `dist` and can be served by GitHub Pages without a backend server.
-- **Correct asset paths for project pages**: Vite is configured with `/Personal-Web/` as the base path, so JavaScript, CSS, and PDF assets load correctly under the GitHub Pages subpath.
+- **Custom-domain-safe asset paths**: Vite uses a relative build base, so JavaScript, CSS, and PDF assets load correctly when GitHub Pages serves the site from `fansixing.com`.
 - **Maintainable structure**: pages, layout components, reusable UI components, theme context, and static assets are separated clearly.
 
 ## Local Development
@@ -61,3 +63,9 @@ Run lint checks:
 ```bash
 npm run lint
 ```
+
+## Deployment
+
+The site is deployed with GitHub Pages and served through the custom domain `fansixing.com`.
+
+The `public/CNAME` file is copied into `dist/CNAME` during `npm run build`, which tells GitHub Pages to preserve the custom domain. Vite uses `base: './'` so built assets load from the current site root instead of `/Personal-Web/`.

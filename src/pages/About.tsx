@@ -1,162 +1,226 @@
 import React from 'react';
-import PageTitle from '../components/common/PageTitle';
-import Card from '../components/common/Card';
-import Section from '../components/common/Section';
-import { motion } from 'framer-motion';
-import { Briefcase, GraduationCap, Mail, MapPin, Calendar } from 'lucide-react';
+import {
+  Award,
+  Briefcase,
+  Code,
+  FileText,
+  GraduationCap,
+  Mail,
+  MapPin,
+} from 'lucide-react';
+import { siteLinks } from '../config/site';
 
 const cvPdfUrl = `${import.meta.env.BASE_URL}pdfs/Francis_CV.pdf`;
 
-const About: React.FC = () => {
-  return (
-    <>
-      <PageTitle 
-        title="About Me"
-        subtitle=""
-      />
-      
-      <Section>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-1">
-            <Card className="sticky top-24">
-              <div className="flex flex-col items-center">
-                
-                <h2 className="text-xl font-semibold text-primary-900 dark:text-primary-50">FAN, Sixing</h2>
-
-                <div className="w-full space-y-3 mt-2">
-                  <div className="flex items-center text-primary-700 dark:text-primary-300">
-                    <Briefcase size={16} className="mr-2 text-accent-500" />
-                    <span>Undergraduate Student</span>
-                  </div>
-                  <div className="flex items-center text-primary-700 dark:text-primary-300">
-                    <MapPin size={16} className="mr-2 text-accent-500" />
-                    <span>Sha Tin, Hong Kong, China</span>
-                  </div>
-                  <div className="flex items-center text-primary-700 dark:text-primary-300">
-                    <Mail size={16} className="mr-2 text-accent-500" />
-                    <span>dynamics986@gmail.com</span>
-                  </div>
-                </div>
-                
-                <div className="flex mt-6 space-x-3">
-                  <a 
-                    href={cvPdfUrl}
-                    download="Francis_CV.pdf"
-                    className="px-4 py-2 bg-accent-500 text-white rounded-md hover:bg-accent-600 transition-colors duration-250"
-                  >
-                    Download CV
-                  </a>
-                  <a
-                    href="mailto:dynamics986@gmail.com"
-                    className="px-4 py-2 bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-200 rounded-md hover:bg-primary-200 dark:hover:bg-primary-700 transition-colors duration-250"
-                  >
-                    Contact Me
-                  </a>
-                </div>
-              </div>
-            </Card>
-          </div>
-          
-          <div className="lg:col-span-2">
-            <Card>
-              <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50 mb-4">Biography</h2>
-              <div className="space-y-4 text-primary-700 dark:text-primary-300">
-                <p>
-                  Hello! I'm FAN, Sixing, an undergraduate student majoring in Mathematics and Information Engineering at CUHK. I choose my major because the useful theories and logical thinking I developed in math help me go further in engineering topics like artificial intelligence and engineering systems. With tools like probability theory and linear algebra, I self-learned various machine learning algorithms in my spare time, like K-Means algorithms, CNN and RNN. 
-                </p>
-                <p>
-                  Continuous learning, engineering innovation and academic connection never fail to fascinate me. I have been in AIoT Lab as an undergraduate student since June 2025. My passion is on spatial engineering topics such as positioning systems, network systems and control theory. I had research on robot indoor navigation and UAV control and communication. My current research is in an interdisciplinary field at the intersection of human-centered AI and robotics.
-                </p>
-              </div>
-            </Card>
-            
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50 mt-12 mb-6">Education</h2>
-
-              <div className="space-y-6">
-                <TimelineItem
-                  icon={<GraduationCap size={18} />}
-                  title="BSc. in Mathematics and Information Engineering"
-                  company="The Chinese University of Hong Kong"
-                  period="Sep 2023 - Present"
-                >
-                  <div className="text-primary-700 dark:text-primary-300">
-                
-                  <ul className="list-disc list-inside space-y-1 text-primary-700 dark:text-primary-300">
-                    <li>Programming Language: C, Java, Python, Matlab</li>
-                    <li>Tools: VS Code, Cursor, GitHub, Blender, Linux System and Wireshark/tcpdump</li>
-                     <li>Mathematics: Calculus, Linear Algebra, Fourier Analysis, Complex Analysis, Algebraic Structures, Mathematical Analysis, Discrete Math and Probability</li>
-                  </ul>
-                  </div>
-                </TimelineItem>
-              </div>              
-              
-              <h2 className="text-2xl font-semibold text-primary-900 dark:text-primary-50 mt-12 mb-6">Research Experience</h2>
-
-              <div className="space-y-6">
-                <TimelineItem
-                  icon={<Briefcase size={18} />}
-                  title="Robot Navigation, Research Assistant"
-                  company="AIoT Lab"
-                  period="Jun 2025 – Feb 2026"
-                >
-                  <ul className="list-disc list-inside space-y-1 text-primary-700 dark:text-primary-300">
-                    <li>Formulated Static Scene Complexity Score (SSCS) to evaluate the indoor scene complexity</li>
-                    <li>Developed a SSCS optimizer for generating indoor scenes of various scene complexity</li>
-                    <li>Used interpolation sampling and Bayesian optimization to improve the efficiency of the system</li>
-                    <li>Generated 50+ distinct scenes with customized objects with the system for indoor navigation test</li>
-                  </ul>
-                </TimelineItem>
-              </div>
-
-            </motion.div>
-          </div>
-        </div>
-      </Section>
-    </>
-  );
-};
-
-interface TimelineItemProps {
+interface SectionHeadingProps {
   icon: React.ReactNode;
   title: string;
-  company: string;
-  period: string;
-  children: React.ReactNode;
 }
 
-const TimelineItem: React.FC<TimelineItemProps> = ({ 
-  icon, 
-  title, 
-  company, 
-  period, 
-  children 
-}) => {
+const SectionHeading: React.FC<SectionHeadingProps> = ({ icon, title }) => (
+  <div className="mb-5 flex items-center gap-3 border-b border-primary-100 pb-3 dark:border-primary-700">
+    <span className="text-accent-600 dark:text-accent-400">{icon}</span>
+    <h2 className="text-xl font-semibold text-primary-900 dark:text-primary-50">{title}</h2>
+  </div>
+);
+
+interface SkillGroupProps {
+  title: string;
+  skills: string[];
+}
+
+const SkillGroup: React.FC<SkillGroupProps> = ({ title, skills }) => (
+  <div>
+    <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-primary-700 dark:text-primary-200">
+      {title}
+    </h3>
+    <div className="flex flex-wrap gap-2">
+      {skills.map((skill) => (
+        <span
+          key={skill}
+          className="rounded-md bg-primary-100 px-2.5 py-1 text-sm text-primary-700 dark:bg-primary-700 dark:text-primary-200"
+        >
+          {skill}
+        </span>
+      ))}
+    </div>
+  </div>
+);
+
+const About: React.FC = () => {
   return (
-    <Card className="relative">
-      <div className="flex flex-col md:flex-row md:items-start">
-        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-100 dark:bg-accent-900 flex items-center justify-center mb-4 md:mb-0 md:mr-4 text-accent-600 dark:text-accent-400">
-          {icon}
-        </div>
-        <div className="flex-grow">
-          <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-            <h3 className="text-xl font-semibold text-primary-900 dark:text-primary-50">{title}</h3>
-            <div className="flex items-center mt-1 md:mt-0">
-              <Calendar size={14} className="text-secondary-500 mr-1" />
-              <span className="text-sm text-secondary-500 dark:text-secondary-400">{period}</span>
+    <div className="mx-auto max-w-5xl space-y-6">
+      <section className="card p-0 overflow-hidden">
+        <div className="grid lg:grid-cols-[minmax(0,1.4fr)_minmax(280px,0.6fr)]">
+          <div className="p-6 sm:p-8">
+            <h1 className="text-3xl font-bold text-primary-900 dark:text-primary-50 md:text-4xl lg:text-5xl">
+              About Me
+            </h1>
+            <p className="mt-3 text-lg text-primary-600 dark:text-primary-300">
+              Mathematics and Information Engineering undergraduate at CUHK
+            </p>
+
+            <div className="mt-6 space-y-3 text-primary-700 dark:text-primary-300">
+              <p>
+                I am interested in applying mathematical reasoning to engineering problems in
+                artificial intelligence, robotics and autonomous systems. My background in
+                probability, linear algebra, and optimization supports my work on
+                spatial intelligence and intelligent control.
+              </p>
+              <p>
+                I joined AIoT Lab as an undergraduate researcher in Jun 2025. My experience
+                includes controlled indoor-scene generation for robot navigation and multi-UAV
+                control and communication, including collision avoidance and target tracking.
+              </p>
             </div>
           </div>
-          <p className="text-accent-600 dark:text-accent-400 mb-3">{company}</p>
-          <div className="mt-2">
-            {children}
+
+          <aside className="border-t border-primary-100 bg-primary-50 p-6 dark:border-primary-700 dark:bg-primary-800/60 sm:p-8 lg:border-l lg:border-t-0">
+            <div className="space-y-4 text-sm text-primary-700 dark:text-primary-300">
+              <p className="flex items-start gap-3">
+                <Briefcase size={17} className="mt-0.5 shrink-0 text-accent-500" />
+                <span>Undergraduate Researcher</span>
+              </p>
+              <p className="flex items-start gap-3">
+                <MapPin size={17} className="mt-0.5 shrink-0 text-accent-500" />
+                <span>Sha Tin, Hong Kong, China</span>
+              </p>
+              <a
+                href="mailto:dynamics986@gmail.com"
+                className="flex items-start gap-3 hover:text-accent-600 dark:hover:text-accent-400"
+              >
+                <Mail size={17} className="mt-0.5 shrink-0 text-accent-500" />
+                <span>dynamics986@gmail.com</span>
+              </a>
+            </div>
+
+            <div className="mt-6 flex items-center gap-5 text-sm font-medium">
+              <a
+                href={siteLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-600 transition-colors hover:text-accent-600 dark:text-primary-300 dark:hover:text-accent-400"
+              >
+                GitHub
+              </a>
+              <a
+                href={siteLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-600 transition-colors hover:text-accent-600 dark:text-primary-300 dark:hover:text-accent-400"
+              >
+                LinkedIn
+              </a>
+            </div>
+
+            <a
+              href={cvPdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent-600 px-4 py-2.5 font-medium text-white transition-colors hover:bg-accent-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600"
+            >
+              <FileText size={18} />
+              Curriculum Vitae
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <div className="grid gap-6 lg:grid-cols-2">
+        <section className="card">
+          <SectionHeading icon={<GraduationCap size={21} />} title="Education" />
+          <h3 className="text-lg font-semibold text-primary-900 dark:text-primary-50">
+            B.Sc. in Mathematics and Information Engineering
+          </h3>
+          <p className="mt-1 text-accent-600 dark:text-accent-400">
+            The Chinese University of Hong Kong
+          </p>
+          <p className="mt-1 text-sm text-secondary-500 dark:text-secondary-400">
+            Sep 2023 - Present
+          </p>
+          <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm text-primary-700 dark:text-primary-300">
+            <li>S.H. Ho College Master&apos;s List Award 2025</li>
+            <li>S.H. Ho College Outstanding Student Scholarship 2025/2026</li>
+            <li>Mandarin (native), Cantonese (fluent), English (fluent)</li>
+          </ul>
+        </section>
+
+        <section className="card">
+          <SectionHeading icon={<Briefcase size={21} />} title="Research Experience" />
+          <h3 className="text-lg font-semibold text-primary-900 dark:text-primary-50">
+            Robot Navigation, Research Assistant
+          </h3>
+          <div className="mt-1 flex flex-wrap items-center justify-between gap-2">
+            <p className="text-accent-600 dark:text-accent-400">AIoT Lab · Hong Kong</p>
+            <p className="text-sm text-secondary-500 dark:text-secondary-400">Jun 2025 - Feb 2026</p>
+          </div>
+          <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm text-primary-700 dark:text-primary-300">
+            <li>Formulated the Static Scene Complexity Score for indoor environments.</li>
+            <li>Developed an optimizer for generating scenes at controlled complexity levels.</li>
+            <li>Applied interpolation sampling and Bayesian optimization.</li>
+            <li>Generated more than 50 customized scenes for navigation tests.</li>
+          </ul>
+        </section>
+      </div>
+
+      <section className="card">
+        <SectionHeading icon={<Code size={21} />} title="Skills &amp; Coursework" />
+        <div className="grid gap-6 sm:grid-cols-2">
+          <SkillGroup
+            title="Mathematics"
+            skills={['Calculus', 'Linear Algebra', 'Fourier Analysis', 'Complex Analysis', 'Probability', 'Discrete Mathematics']}
+          />
+          <SkillGroup
+            title="Programming & Tools"
+            skills={['C', 'Java', 'Python', 'TypeScript', 'MATLAB', 'Linux', 'Hugging Face', 'GitHub', 'Blender', 'Gazebo', 'Wireshark']}
+          />
+          <SkillGroup
+            title="Research Interests"
+            skills={['World Models', 'Autonomous Systems', 'Spatial Intelligence', 'Prediction and Decision-Making','Reinforcement Learning', ]}
+          />
+          <SkillGroup
+            title="Engineering"
+            skills={['Numerical Optimization', 'Data Structures', 'Computer Networks', 'Software Development']}
+          />
+        </div>
+      </section>
+
+      <section className="card">
+        <SectionHeading icon={<Award size={21} />} title="Certifications &amp; Awards" />
+        <div className="grid gap-x-10 gap-y-5 md:grid-cols-2">
+          <div>
+            <h3 className="font-semibold text-primary-800 dark:text-primary-100">
+              Standard Chartered Hong Kong Marathon 2026 Half Marathon Finisher
+            </h3>
+            <p className="mt-1 text-sm text-secondary-500 dark:text-secondary-400">HKAAA · 2026</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-primary-800 dark:text-primary-100">
+              Attendance Certificate for Course of Communication Challenges: Vision, Hearing and Speech
+            </h3>
+            <p className="mt-1 text-sm text-secondary-500 dark:text-secondary-400">
+              CUHK Jockey Club Institute of Ageing · 2025
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-primary-800 dark:text-primary-100">
+              Certificate of Recognition for the LEAD 1001 Program
+            </h3>
+            <p className="mt-1 text-sm text-secondary-500 dark:text-secondary-400">
+              Learning and Cultural Enhancement Section, CUHK · 2023
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-primary-800 dark:text-primary-100">
+              Attendance Certificate for Course of Caregiver Stress
+            </h3>
+            <p className="mt-1 text-sm text-secondary-500 dark:text-secondary-400">
+              CUHK Jockey Club Institute of Ageing · 2025
+            </p>
           </div>
         </div>
-      </div>
-    </Card>
+      </section>
+    </div>
   );
 };
 

@@ -55,9 +55,6 @@ export default {
         'card': '0 2px 4px rgba(0,0,0,0.05)',
         'card-hover': '0 4px 8px rgba(0,0,0,0.1)',
       },
-      spacing: {
-        '128': '32rem',
-      },
       transitionDuration: {
         '250': '250ms',
       },

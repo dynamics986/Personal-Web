@@ -1,13 +1,12 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 interface PageTitleProps {
   title: string;
   subtitle?: string;
-  children?: ReactNode;
 }
 
-const PageTitle: React.FC<PageTitleProps> = ({ title, subtitle, children }) => {
+const PageTitle: React.FC<PageTitleProps> = ({ title, subtitle }) => {
   return (
     <motion.div 
       className="mb-12 text-center"
@@ -23,7 +22,6 @@ const PageTitle: React.FC<PageTitleProps> = ({ title, subtitle, children }) => {
           {subtitle}
         </p>
       )}
-      {children}
     </motion.div>
   );
 };

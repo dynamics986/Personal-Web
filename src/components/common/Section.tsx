@@ -10,9 +10,7 @@ interface SectionProps {
 const Section: React.FC<SectionProps> = ({ children, className, id }) => {
   return (
     <section id={id} className={clsx('py-12', className)}>
-      <div className="container-custom">
-        {children}
-      </div>
+      {children}
     </section>
   );
 };

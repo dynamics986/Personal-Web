@@ -49,17 +49,6 @@ const blogPosts: BlogPost[] = [
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmU0YvmukmvjVQwl-qtmzbHUq3ti1kKizYQg&s',
     pdfPath: publicAsset('pdfs/IERG3310_Essence.pdf'),
   },
-  {
-    id: '4',
-    title: 'Tech Stack',
-    excerpt: 'A personal idea of what our gesture to face this AI times',
-    date: 'April 30, 2026',
-    readTime: '3 min read',
-    category: 'Technology',
-    image: 'https://www.pynetlabs.com/wp-content/uploads/Types-of-Routing-Algorithm-in-Computer-Networks-1024x451.webp',
-    pdfPath: publicAsset('pdfs/Tech_Stack.pdf'),
-  },
-
 ];
 
 const Blog: React.FC = () => {

@@ -1,40 +1,37 @@
-# FAN, Sixing Personal Website
+# FAN, Sixing — Academic and Personal Website
 
-Live site: https://fansixing.com/#/
+Live site: [https://fansixing.com/](https://fansixing.com/)
 
-GitHub Pages fallback URL: https://dynamics986.github.io/Personal-Web/#/
+This repository contains the source for two related website areas:
 
-This repository contains the source code for my personal academic and project portfolio website. The site introduces my background as a Mathematics and Information Engineering undergraduate student, highlights my research experience, shares blog and publication PDFs, presents selected programming and research projects, and provides a downloadable CV.
+- `/` — a concise, English academic homepage.
+- `/personal` — a personal portfolio with About, Blog, Projects, and dark mode.
 
-## Features
+The academic homepage does not link to the personal area. The personal header includes a link back to the academic homepage.
 
-- Responsive personal profile with biography, education, skills, and research experience.
-- Blog and publications section with view/download support for PDF materials.
-- Projects page with filtering and external GitHub project links.
-- CV page with a downloadable PDF resume.
-- Dark/light theme support with persisted user preference.
-- Static GitHub Pages deployment with hash routing for reliable refresh behavior.
+## Main routes
 
-## Technology Stack
+- `/` — Academic homepage
+- `/personal` — About and CV summary
+- `/personal/blog` — Blog posts and PDF notes
+- `/personal/projects` — Programming and research projects
+- `/personal/cv` — Compatibility redirect to `/personal`
 
-- **React 18**: component-based frontend UI.
-- **TypeScript**: type-safe application code and safer refactoring.
-- **Vite**: fast local development server and optimized production builds.
-- **React Router**: client-side routing between About, Blog, Projects, and CV pages.
-- **Tailwind CSS**: utility-first styling for responsive layouts and consistent design.
-- **Framer Motion**: smooth page and card animations.
-- **Lucide React**: clean, lightweight icon components.
-- **GitHub Actions**: automated build and deployment to GitHub Pages.
+Older hash routes such as `/#/blog`, `/#/projects`, and `/#/cv` are migrated to their current personal-site routes when the application starts.
 
-## Project Advantages
+## Technology
 
-- **Fully static hosting compatible**: the production site is built into `dist` and can be served by GitHub Pages without a backend server.
-- **Custom-domain-safe asset paths**: Vite uses a relative build base, so JavaScript, CSS, and PDF assets load correctly when GitHub Pages serves the site from `fansixing.com`.
-- **Maintainable structure**: pages, layout components, reusable UI components, theme context, and static assets are separated clearly.
+- React 18 and TypeScript
+- Vite
+- React Router with `BrowserRouter`
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- GitHub Actions and GitHub Pages
 
-## Local Development
+## Local development
 
-Install dependencies:
+Install the exact locked dependency versions:
 
 ```bash
 npm ci
@@ -46,26 +43,34 @@ Start the development server:
 npm run dev
 ```
 
-Build the production site:
-
-```bash
-npm run build
-```
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
-
-Run lint checks:
+Run the code checks:
 
 ```bash
 npm run lint
+npm run typecheck
 ```
 
-## Deployment
+Create and preview a production build:
 
-The site is deployed with GitHub Pages and served through the custom domain `fansixing.com`.
+```bash
+npm run build
+npm run preview
+```
 
-The `public/CNAME` file is copied into `dist/CNAME` during `npm run build`, which tells GitHub Pages to preserve the custom domain. Vite uses `base: './'` so built assets load from the current site root instead of `/Personal-Web/`.
+The generated `dist/` directory is a build artifact. Do not edit its hashed files manually; Vite recreates and may rename them during every build.
+
+## Static assets
+
+Files under `public/` keep stable website paths:
+
+- `public/images/` — portraits and project images
+- `public/pdfs/` — CV and blog PDFs
+- `public/CNAME` — preserves the `fansixing.com` custom domain
+
+The CV is linked directly from `public/pdfs/Francis_CV.pdf`; there is no separate CV page.
+
+## GitHub Pages deployment
+
+Pushing `main` runs `.github/workflows/deploy.yml`, builds the site, and deploys `dist/` to GitHub Pages. The `postbuild` script copies `dist/index.html` to `dist/404.html`, allowing `BrowserRouter` paths such as `/personal/projects` to load directly and refresh correctly.
+
+Detailed editing instructions are maintained locally in `docs/edit.md`. The entire `docs/` directory is intentionally ignored by Git.

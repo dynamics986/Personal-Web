@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import PageTitle from '../components/common/PageTitle';
 import Card from '../components/common/Card';
 import Section from '../components/common/Section';
-import { Github as GitHub, ExternalLink, Code } from 'lucide-react';
+import { Github as GitHub, Code } from 'lucide-react';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
+
+type ProjectCategory = 'TypeScript' | 'Python' | 'JavaScript' | 'C';
 
 interface Project {
   id: string;
@@ -13,9 +15,12 @@ interface Project {
   image: string;
   technologies: string[];
   githubUrl: string;
-  liveUrl?: string;
-  category: 'web' | 'mobile' | 'other';
+  category: ProjectCategory;
 }
+
+type ProjectFilter = 'all' | ProjectCategory;
+
+const projectFilters: ProjectFilter[] = ['all', 'TypeScript', 'Python', 'JavaScript', 'C'];
 
 const projects: Project[] = [
   {
@@ -36,10 +41,37 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/dynamics986/SSCS-Optimizer',
     category: 'Python'
   },
+  {
+    id: '3',
+    title: 'Mass Mail Filter',
+    description: 'A bilingual opportunity feed that turns the CUHK Undergraduate Digest into searchable, filterable recommendations with scoring and date tracking.',
+    image: '/images/projects/mass-mail-filter.png',
+    technologies: ['React', 'TypeScript', 'Python', 'PWA', 'Recommendation System'],
+    githubUrl: 'https://github.com/dynamics986/Mass-Mail-Filter',
+    category: 'TypeScript'
+  },
+  {
+    id: '4',
+    title: 'TextPictures',
+    description: 'An image-processing tool that uses adaptive HSV brightness tiers to generate high-resolution Chinese-character density mosaics.',
+    image: '/images/projects/textpictures.jpg',
+    technologies: ['Python', 'OpenCV', 'Pillow', 'NumPy', 'Image Processing'],
+    githubUrl: 'https://github.com/dynamics986/TextPictures',
+    category: 'Python'
+  },
+  {
+    id: '5',
+    title: 'Tetris Game',
+    description: 'A responsive browser-based Tetris game with keyboard and touch controls, ghost and next-piece previews, scoring, levels, and a local high score.',
+    image: '/images/projects/tetris-game.png',
+    technologies: ['JavaScript', 'HTML', 'CSS', 'Game Development', 'Responsive Design'],
+    githubUrl: 'https://github.com/dynamics986/Tetris-Game',
+    category: 'JavaScript'
+  },
 ];
 
 const Projects: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<string>('all');
+  const [activeFilter, setActiveFilter] = useState<ProjectFilter>('all');
   
   const filteredProjects = activeFilter === 'all' 
     ? projects 
@@ -54,8 +86,8 @@ const Projects: React.FC = () => {
       
       <Section>
         <div className="flex justify-center mb-8">
-          <div className="flex space-x-2 bg-primary-100 dark:bg-primary-800 p-1 rounded-lg">
-            {['all', 'C', 'Python', 'other'].map((filter) => (
+          <div className="flex flex-wrap justify-center gap-2 bg-primary-100 dark:bg-primary-800 p-1 rounded-lg">
+            {projectFilters.map((filter) => (
               <button
                 key={filter}
                 className={clsx(
@@ -108,7 +140,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       }}
     >
       <Card className="h-full flex flex-col overflow-hidden">
-        <div className="h-48 overflow-hidden rounded-t-lg -mx-6 -mt-6 mb-4 relative group">
+        <div className="aspect-video overflow-hidden rounded-t-lg -mx-6 -mt-6 mb-4 relative group">
           <img 
             src={project.image} 
             alt={project.title} 
@@ -125,17 +157,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               >
                 <GitHub size={20} className="text-primary-900" />
               </a>
-              {project.liveUrl && (
-                <a 
-                  href={project.liveUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-2 bg-white rounded-full hover:bg-accent-100 transition-colors duration-250"
-                  aria-label={`View ${project.title} live demo`}
-                >
-                  <ExternalLink size={20} className="text-primary-900" />
-                </a>
-              )}
             </div>
           </div>
         </div>
